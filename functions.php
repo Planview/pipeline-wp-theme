@@ -84,7 +84,11 @@ add_action( 'widgets_init', 'pipeline_widgets_init' );
  * Enqueue scripts and styles.
  */
 function pipeline_scripts() {
-	wp_enqueue_style( 'pipeline-style', get_stylesheet_uri() );
+	if ( is_admin() ) wp_enqueue_style( 'pipeline-style', get_stylesheet_uri() );
+
+    if ( !is_admin() ) {
+        wp_enqueue_style( 'pipeline-style', get_stylesheet_directory_uri() . '/css/style.css' );
+    }
 
 	wp_enqueue_script( 'pipeline-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
