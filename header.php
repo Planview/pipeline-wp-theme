@@ -27,11 +27,40 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'pipeline' ); ?></a>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location'    =>  'navbar-left',
+                            'fallback_cb'       =>  false,
+                            'menu_class'        =>  'nav navbar-nav',
+                            'depth'             =>  2,
+                            'walker'            =>  new Pipeline_Bootstrap_Nav_Walker()
+                        )
+                    ); ?>
+                    <?php wp_nav_menu(
+                        array(
+                            'theme_location'    =>  'navbar-right',
+                            'fallback_cb'       =>  false,
+                            'menu_class'        =>  'nav navbar-nav navbar-right',
+                            'depth'             =>  2,
+                            'walker'            =>  new Pipeline_Bootstrap_Nav_Walker()
+                        )
+                    ); ?>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

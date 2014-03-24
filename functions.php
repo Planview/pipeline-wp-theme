@@ -48,7 +48,8 @@ function pipeline_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'pipeline' ),
+		'navbar-left' => __( 'Navbar Menu &ndash Left Side', 'pipeline' ),
+        'navbar-right' => __( 'Navbar Menu &ndash Right Side', 'pipeline' )
 	) );
 
 	// Enable support for Post Formats.
@@ -118,6 +119,11 @@ add_action( 'wp_enqueue_scripts', 'pipeline_scripts' );
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom nav walkers for this theme.
+ */
+require get_template_directory() . '/inc/nav-walker-bootstrap.php';
 
 /**
  * Custom functions that act independently of the theme templates.
