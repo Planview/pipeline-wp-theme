@@ -129,3 +129,15 @@ function pipeline_category_transient_flusher() {
 }
 add_action( 'edit_category', 'pipeline_category_transient_flusher' );
 add_action( 'save_post',     'pipeline_category_transient_flusher' );
+
+/**
+ * Add  polyfills for IE8
+ */
+function pipeline_polyfill() {
+    ?><!--[if lte IE 6]>
+    <style>.bg-size{-ms-behavior:url('<?php echo get_template_directory_uri() . '/vendor/background-size-polyfill/backgroundsize.min.htc' ?>')}</style>
+    <script src="<?php echo get_template_directory_uri() . '/vendor/respond/dest/respond.min.js' ?>"></script>
+<![endif]-->
+<?php
+}
+add_action('wp_head', 'pipeline_polyfill',20);
