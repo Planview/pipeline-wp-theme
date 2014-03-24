@@ -5,10 +5,25 @@
 
 #page {
   @extend .container;
-  margin-top: 40px;
-  background-color: rgba(255,255,255,0.9);
+  margin: {
+    top: 40px;
+    bottom: 40px;
+  }
+  background:{
+    color: #fff; // IE8 doesn't do rgba
+    color: rgba(255,255,255,0.8);
+  }
   @include box-shadow(0px 0px 40px rgba(0,0,0,0.4));
 }
 .screen-reader-text {
   @extend .sr-only;
+}
+
+.navbar {
+  font: {
+    family: $headings-font-family;
+    weight: 400;
+    size: 20px;
+  }
+  @include box-shadow(0 0 20px rgba(0,0,0,0.1));
 }
