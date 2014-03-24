@@ -1,0 +1,569 @@
+{
+  "id": "b6917f78",
+  "cfgVersion": 1,
+  "name": "PIPELINE WP Theme",
+  "files": {
+    "2e8f9ea2": {
+      "id": "2e8f9ea2",
+      "pid": "b6917f78",
+      "name": "README.md",
+      "input": "README.md",
+      "customOutput": false,
+      "type": "Md",
+      "config": {
+        "autoCompile": false,
+        "sanitize": false,
+        "gfm": true
+      }
+    },
+    "1d3c41d6": {
+      "id": "1d3c41d6",
+      "pid": "b6917f78",
+      "name": "modernizr.js",
+      "input": "js\\modernizr.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "fe2cfe0b": {
+      "id": "fe2cfe0b",
+      "pid": "b6917f78",
+      "name": "bootstrap.js",
+      "input": "js\\bootstrap.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "fd7c82e1": {
+      "id": "fd7c82e1",
+      "pid": "b6917f78",
+      "name": "style.scss",
+      "input": "sass\\style.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "compassConfigRb": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false,
+        "sourcemaps": false
+      }
+    },
+    "3daad175": {
+      "id": "3daad175",
+      "pid": "b6917f78",
+      "name": "pipeline.js",
+      "input": "js\\pipeline.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    }
+  },
+  "imports": {
+    "15155238": {
+      "id": "15155238",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_pagination.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "17060694": {
+      "id": "17060694",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_grid.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "d521b52b": {
+      "id": "d521b52b",
+      "pid": "b6917f78",
+      "path": "vendor\\modernizr\\modernizr.js",
+      "parents": [
+        "1d3c41d6"
+      ]
+    },
+    "5ecc8439": {
+      "id": "5ecc8439",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\affix.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "24c6923b": {
+      "id": "24c6923b",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\alert.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "f43dcf79": {
+      "id": "f43dcf79",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\button.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "cc868b4c": {
+      "id": "cc868b4c",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\carousel.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "f25d92b4": {
+      "id": "f25d92b4",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\collapse.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "16849beb": {
+      "id": "16849beb",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\dropdown.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "ec676969": {
+      "id": "ec676969",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\tab.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "894d4b89": {
+      "id": "894d4b89",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\transition.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "caaab6fc": {
+      "id": "caaab6fc",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\scrollspy.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "62ee06a0": {
+      "id": "62ee06a0",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\modal.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "9a336b23": {
+      "id": "9a336b23",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\tooltip.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "bc297557": {
+      "id": "bc297557",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\popover.js",
+      "parents": [
+        "fe2cfe0b"
+      ]
+    },
+    "f87086ac": {
+      "id": "f87086ac",
+      "pid": "b6917f78",
+      "path": "sass\\_variables.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "365066e9": {
+      "id": "365066e9",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "3e08171c": {
+      "id": "3e08171c",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_variables.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "0d20dd8e": {
+      "id": "0d20dd8e",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_mixins.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "5f0690e0": {
+      "id": "5f0690e0",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_normalize.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "a2e34e6f": {
+      "id": "a2e34e6f",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_print.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "c57581ef": {
+      "id": "c57581ef",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_scaffolding.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "b8466163": {
+      "id": "b8466163",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_type.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "ff19c5cf": {
+      "id": "ff19c5cf",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_code.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "50b01746": {
+      "id": "50b01746",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_tables.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "94431ae3": {
+      "id": "94431ae3",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_forms.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "54ebfc5f": {
+      "id": "54ebfc5f",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_buttons.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "4c99d7cb": {
+      "id": "4c99d7cb",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_component-animations.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "271e06c1": {
+      "id": "271e06c1",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_glyphicons.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "384ac1cb": {
+      "id": "384ac1cb",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_dropdowns.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "9a5e2144": {
+      "id": "9a5e2144",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_button-groups.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "b0995263": {
+      "id": "b0995263",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_input-groups.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "b304e4f2": {
+      "id": "b304e4f2",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_navs.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "49b06b33": {
+      "id": "49b06b33",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_navbar.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "bff6a859": {
+      "id": "bff6a859",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_breadcrumbs.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "9228c061": {
+      "id": "9228c061",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_pager.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "e9f0e998": {
+      "id": "e9f0e998",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_labels.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "04806113": {
+      "id": "04806113",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_badges.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "b489ab72": {
+      "id": "b489ab72",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_jumbotron.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "099e2d52": {
+      "id": "099e2d52",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_thumbnails.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "f746ce76": {
+      "id": "f746ce76",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_alerts.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "2bff8825": {
+      "id": "2bff8825",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_progress-bars.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "75c9087b": {
+      "id": "75c9087b",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_media.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "00d23910": {
+      "id": "00d23910",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_list-group.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "4c99bd45": {
+      "id": "4c99bd45",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_panels.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "402913ea": {
+      "id": "402913ea",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_wells.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "bd4785d9": {
+      "id": "bd4785d9",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_close.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "2e4e6e53": {
+      "id": "2e4e6e53",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_modals.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "5118df68": {
+      "id": "5118df68",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_tooltip.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "f3a0c380": {
+      "id": "f3a0c380",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_popovers.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "f63cd39c": {
+      "id": "f63cd39c",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_carousel.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "24e08f98": {
+      "id": "24e08f98",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_utilities.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "60a5fa2c": {
+      "id": "60a5fa2c",
+      "pid": "b6917f78",
+      "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_responsive-utilities.scss",
+      "parents": [
+        "fd7c82e1"
+      ]
+    },
+    "63951a8c": {
+      "id": "63951a8c",
+      "pid": "b6917f78",
+      "path": "js\\src\\navigation.js",
+      "parents": [
+        "3daad175"
+      ]
+    },
+    "c1d8056a": {
+      "id": "c1d8056a",
+      "pid": "b6917f78",
+      "path": "js\\src\\skip-link-focus-fix.js",
+      "parents": [
+        "3daad175"
+      ]
+    }
+  },
+  "images": {
+    "bc77a80d": {
+      "id": "bc77a80d",
+      "pid": "b6917f78",
+      "path": "screenshot.png",
+      "size": 6757,
+      "name": "screenshot.png",
+      "type": "Png",
+      "initialSize": 6757,
+      "status": "NOT_OPTIMIZED"
+    }
+  },
+  "config": {
+    "watch": true,
+    "liveRefresh": true,
+    "liveRefreshDelay": 0,
+    "filterPatterns": "js/src/*",
+    "useCustomServer": true,
+    "customServerUrl": "http://pipeline.local",
+    "cssPath": "css",
+    "jsPath": "js",
+    "htmlPath": "html",
+    "minJsPath": "min",
+    "htmlExtension": ".html",
+    "cssPathType": "REPLACE_TYPE",
+    "htmlPathType": "REPLACE_TYPE",
+    "jsPathType": "REPLACE_TYPE",
+    "minJsPathType": "RELATIVE_FILEDIR",
+    "htmlTypes": "jade, haml, slim, markdown, md",
+    "cssTypes": "less, sass, stylus, scss, styl",
+    "jsTypes": "coffee, coffeescript, coffeescripts, ls, livescript, livescripts",
+    "cssPreprocessorPath": "",
+    "htmlPreprocessorPath": "",
+    "jsPreprocessorPath": "",
+    "minJsPreprocessorPath": "",
+    "autoprefixerBrowsers": "",
+    "ftpHost": "",
+    "ftpPort": "21",
+    "ftpRemotePath": "",
+    "ftpIgnorePreprocessorFiles": true,
+    "ftpType": "FTP",
+    "ftpExcludePatterns": "",
+    "ftpPassword": "",
+    "ftpUsername": ""
+  }
+}
