@@ -44,6 +44,20 @@
         "sourcemaps": false
       }
     },
+    "3daad175": {
+      "id": "3daad175",
+      "pid": "b6917f78",
+      "name": "pipeline.js",
+      "input": "js\\pipeline.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
     "fd7c82e1": {
       "id": "fd7c82e1",
       "pid": "b6917f78",
@@ -61,20 +75,6 @@
         "compassConfigRb": false,
         "outputStyle": "expanded",
         "autoprefixer": false,
-        "sourcemaps": false
-      }
-    },
-    "3daad175": {
-      "id": "3daad175",
-      "pid": "b6917f78",
-      "name": "pipeline.js",
-      "input": "js\\pipeline.js",
-      "customOutput": false,
-      "type": "Js",
-      "config": {
-        "autoCompile": true,
-        "uglify": true,
-        "mangle": true,
         "sourcemaps": false
       }
     }
@@ -198,6 +198,22 @@
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\javascripts\\bootstrap\\popover.js",
       "parents": [
         "fe2cfe0b"
+      ]
+    },
+    "63951a8c": {
+      "id": "63951a8c",
+      "pid": "b6917f78",
+      "path": "js\\src\\navigation.js",
+      "parents": [
+        "3daad175"
+      ]
+    },
+    "c1d8056a": {
+      "id": "c1d8056a",
+      "pid": "b6917f78",
+      "path": "js\\src\\skip-link-focus-fix.js",
+      "parents": [
+        "3daad175"
       ]
     },
     "f87086ac": {
@@ -502,22 +518,6 @@
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_responsive-utilities.scss",
       "parents": [
         "fd7c82e1"
-      ]
-    },
-    "63951a8c": {
-      "id": "63951a8c",
-      "pid": "b6917f78",
-      "path": "js\\src\\navigation.js",
-      "parents": [
-        "3daad175"
-      ]
-    },
-    "c1d8056a": {
-      "id": "c1d8056a",
-      "pid": "b6917f78",
-      "path": "js\\src\\skip-link-focus-fix.js",
-      "parents": [
-        "3daad175"
       ]
     }
   },
