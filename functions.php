@@ -73,29 +73,6 @@ endif; // pipeline_setup
 add_action( 'after_setup_theme', 'pipeline_setup' );
 
 /**
- * Register widgetized area and update sidebar with default widgets.
- */
-function pipeline_widgets_init() {
-    register_sidebar( array(
-        'name'          => __( 'Sidebar', 'pipeline' ),
-        'id'            => 'sidebar-1',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div></aside>',
-        'before_title'  => '<h1 class="widget-title">',
-        'after_title'   => '</h1><div class="widget-content">',
-    ) );
-    register_sidebar( array(
-        'name'          => __( 'Front Page Sidebar', 'pipeline' ),
-        'id'            => 'front-1',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</div></aside>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2><div class="widget-content">',
-    ) );
-}
-add_action( 'widgets_init', 'pipeline_widgets_init' );
-
-/**
  * Enqueue scripts and styles.
  */
 function pipeline_scripts() {
@@ -122,6 +99,11 @@ add_action( 'wp_enqueue_scripts', 'pipeline_scripts' );
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Widget settings for this theme.
+ */
+require get_template_directory() . '/inc/widgets.php';
 
 /**
  * Custom template tags for this theme.
