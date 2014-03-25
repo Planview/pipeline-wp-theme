@@ -11,10 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="sponsors">
+            <?php the_field('pipeline_footer_content', 'option'); ?>
+        </div>
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'pipeline' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'pipeline' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'pipeline' ), 'PIPELINE', '<a href="https://github.com/Planview" rel="designer">Planview WCS</a>' ); ?>
+			<?php printf( __( 'Copyright &copy; %s PIPELINE Conference. All rights reserved.', 'pipeline' ), date('Y') ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

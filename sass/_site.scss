@@ -1,0 +1,72 @@
+/* Base Styles */
+body {
+  background: {
+    image: url('../img/color-bg.png');
+    repeat: no-repeat;
+    position: top left;
+    size: 80%;
+  }
+}
+
+.site-branding {
+  @extend .col-sm-9;
+}
+.site-title {
+  @extend .text-hide;
+  margin: {
+    top: 0;
+  }
+  width: 100%;
+  background: {
+    repeat: no-repeat;
+    size: cover;
+    image: url('../img/header-stack.png');
+  }
+  padding:{
+    top: 65%;
+  }
+  @media screen and (min-width: 480px) {
+    background-image: url('../img/header-wide.png');
+    padding: {
+      top: 16.2%;
+    }
+  }
+}
+.site-description {
+  @extend .sr-only;
+}
+.announcements {
+  @extend .col-sm-3, .hidden-xs;
+}
+.navbar {
+  font: {
+    family: $headings-font-family;
+    weight: 400;
+    size: 20px;
+  }
+  @include box-shadow(0 0 20px rgba(0,0,0,0.1));
+}
+
+.site-footer {
+  margin-top: 20px;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+  border: {
+    top: 2px $body-bg solid;
+  }
+}
+.sponsors {
+  text: {
+    align: center;
+  }
+  h2 {
+    margin: {
+      top: 5px;
+    }
+  }
+}
+.site-info {
+  text-align: center;
+}

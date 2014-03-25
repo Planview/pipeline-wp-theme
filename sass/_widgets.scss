@@ -1,0 +1,17 @@
+.widget-area {
+  .widget {
+    @extend .panel, .panel-default;
+    @include box-shadow(0 0 20px rgba(0,0,0,0.1));
+    border: 1px solid $navbar-default-border;
+  }
+  .widget-title {
+    @extend .panel-heading;
+    padding:{
+      left: $panel-body-padding;
+      right: $panel-body-padding;
+    }
+  }
+  .widget-content {
+    @extend .panel-body;
+  }
+}

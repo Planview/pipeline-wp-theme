@@ -1,0 +1,42 @@
+.header-content{
+  @extend .row;
+  margin: {
+    top: 20px;
+  }
+}
+#page {
+  @extend .container;
+  @media screen and (min-width: $screen-sm-min) {
+    margin: {
+      top: 40px;
+      bottom: 40px;
+    }
+  }
+  background:{
+    color: #fff; // IE8 doesn't do rgba
+    color: rgba(255,255,255,0.97);
+  }
+  @include box-shadow(0px 0px 40px rgba(0,0,0,0.4));
+}
+
+.site-content {
+  @extend .row;
+}
+.content-area {
+  @extend .col-sm-9;
+  .home & {
+    @extend .col-sm-7, .col-sm-pull-5;
+  }
+}
+.site-main {
+  padding: {
+    left: 20px;
+    right: 20px;
+  }
+}
+.widget-area {
+  @extend .col-sm-3;
+  .home & {
+    @extend .col-sm-5, .col-sm-push-7;
+  }
+}
