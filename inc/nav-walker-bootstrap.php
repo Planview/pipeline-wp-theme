@@ -47,9 +47,11 @@ class Pipeline_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
         $attributes	.=	$args->has_children	? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
         $item_icon = '';
-        if ( $depth == 0 && $glyphicon_class = get_post_meta( $item->ID, 'menu-item-glyphicon' ) ) {
-            $glyphicon_class = $glyphicon_class[0];
-            $item_icon .=  sprintf( '<span class="navbar-icon glyphicon %s"></span>', $glyphicon_class );
+        if ( $depth == 0 && $icon_class = get_post_meta( $item->ID, 'menu-item-glyphicon' ) ) {
+            $icon_class = $icon_class[0];
+            $icon_class .= ' navbar-icon';
+            $icon_class .= ( strpos( $icon_class, "glyphicon-") !== false ) ? " glyphicon" : " fa";
+            $item_icon .=  sprintf( '<span class="%s"></span>', $icon_class );
         }
 
         $item_output	=	$args->before . '<a' . $attributes . '>';
