@@ -6,6 +6,8 @@
  * Time: 9:51 AM
  */
 
+if ( ! defined( 'DOING_AJAX' ) || ! DOING_AJAX ) :
+
 function myplugin_load_menu_item_custom_fields() {
     require_once get_template_directory() . '/vendor/wp-menu-item-custom-fields/menu-item-custom-fields.php';
 }
@@ -74,7 +76,7 @@ class Pipeline_Menu_Item_Custom_Fields {
     public static function fields( $item, $depth, $args = array(), $id = 0 ) {
         ?>
         <p class="field-glyphicon description description-wide">
-            <label for="edit-menu-item-glyphicon-<?php echo esc_attr( $item->ID ) ?>"><?php _e( 'Glyphicon (navbar only, syntax is <code>glyphicon-fire</code>)', 'pipeline' ) ?><br />
+            <label for="edit-menu-item-glyphicon-<?php echo esc_attr( $item->ID ) ?>"><?php _e( 'Glyphicon (navbar only, syntax is <code>glyphicon-fire</code> or <code>fa-linux</code>)', 'pipeline' ) ?><br />
                 <?php printf(
                     '<input type="text" value="%1$s" name="menu-item-glyphicon[%2$d]" class="widefat code edit-menu-item-glyphicon" id="edit-menu-item-glyphicon-%2$d">',
                     esc_attr( get_post_meta( $item->ID, 'menu-item-glyphicon', true ) ),
@@ -101,3 +103,5 @@ class Pipeline_Menu_Item_Custom_Fields {
     }
 }
 Pipeline_Menu_Item_Custom_Fields::init();
+
+endif; // AJAX check
