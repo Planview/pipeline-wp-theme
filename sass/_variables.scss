@@ -76,7 +76,7 @@ $headings-font-weight:    700;
 ////
 ////## Specify custom locations of the include Glyphicons icon font. Useful for those including Bootstrap via Bower.
 //
-//$icon-font-path: "bootstrap/" !default;
+$icon-font-path: "../vendor/bootstrap-sass-official/vendor/assets/fonts/bootstrap/" !default;
 //$icon-font-name:          "glyphicons-halflings-regular" !default;
 //$icon-font-svg-id:        "glyphicons_halflingsregular" !default;
 //
@@ -345,7 +345,7 @@ $navbar-default-border:            darken($navbar-default-bg, 15%);
 //$navbar-default-link-color:                #777 !default;
 //$navbar-default-link-hover-color:          #333 !default;
 //$navbar-default-link-hover-bg:             transparent !default;
-//$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-active-color:         $brand-primary;
 //$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 //$navbar-default-link-disabled-color:       #ccc !default;
 //$navbar-default-link-disabled-bg:          transparent !default;

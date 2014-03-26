@@ -40,14 +40,20 @@ class Pipeline_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
 
         $output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
 
-        $attributes	=	$item->attr_title	? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
+        $attributes	 =	$item->attr_title	? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
         $attributes	.=	$item->target		? ' target="' . esc_attr( $item->target     ) .'"' : '';
         $attributes	.=	$item->xfn			? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
         $attributes	.=	$item->url			? ' href="'   . esc_attr( $item->url        ) .'"' : '';
         $attributes	.=	$args->has_children	? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
+        $item_icon = '';
+        if ( $depth == 0 && $glyphicon_class = get_post_meta( $item->ID, 'menu-item-glyphicon' ) ) {
+            $glyphicon_class = $glyphicon_class[0];
+            $item_icon .=  sprintf( '<span class="navbar-icon glyphicon %s"></span>', $glyphicon_class );
+        }
+
         $item_output	=	$args->before . '<a' . $attributes . '>';
-        $item_output	.=	$args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+        $item_output	.=	$args->link_before . $item_icon . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         $item_output	.=	( $args->has_children AND 1 > $depth ) ? ' <b class="caret"></b>' : '';
         $item_output	.=	'</a>' . $args->after;
 

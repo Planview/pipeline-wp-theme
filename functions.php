@@ -134,3 +134,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load Custom Fields
  */
 require get_template_directory() . '/inc/custom-fields.php';
+
+/**
+ * Load Custom Fields for Nav Menu
+ */
+require get_template_directory() . '/inc/nav-custom-fields.php';
