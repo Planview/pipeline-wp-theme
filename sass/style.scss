@@ -5,6 +5,10 @@
 @import "variables";
 @import "../vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
 
+/* Font Awesome */
+$fa-path: "../vendor/font-awesome/fonts";
+@import "../vendor/font-awesome/scss/font-awesome";
+
 /* My Styles */
 @import "layout";
 @import "site";

@@ -20,6 +20,7 @@
     "background-size-polyfill": "~0.2.0",
     "webshim": "~1.12.4",
     "modernizr": "~2.7.2",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "font-awesome": "~4.0.3"
   }
 }
