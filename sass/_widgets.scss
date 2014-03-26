@@ -3,6 +3,9 @@
     @extend .panel, .panel-default;
     @include box-shadow(0 0 20px rgba(0,0,0,0.1));
     border: 1px solid $navbar-default-border;
+    .home & {
+      @extend .panel-info;
+    }
   }
   .widget-title {
     @extend .panel-heading;

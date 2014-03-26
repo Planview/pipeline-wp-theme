@@ -19,7 +19,7 @@
 //
 $brand-primary:         #003399;
 //$brand-success:         #5cb85c !default;
-//$brand-info:            #5bc0de !default;
+$brand-info:            #59B5E4;
 //$brand-warning:         #f0ad4e !default;
 //$brand-danger:          #d9534f !default;
 //
@@ -474,8 +474,8 @@ $navbar-default-link-active-color:         $brand-primary;
 //$state-success-bg:               #dff0d8 !default;
 //$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 //
-//$state-info-text:                #31708f !default;
-//$state-info-bg:                  #d9edf7 !default;
+$state-info-text:                $brand-primary;
+$state-info-bg:                  desaturate(lighten($brand-info, 10%), 5%);
 //$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 //
 //$state-warning-text:             #8a6d3b !default;
@@ -686,7 +686,7 @@ $panel-default-heading-bg:    #fff !default;
 //$panel-success-heading-bg:    $state-success-bg !default;
 //
 //$panel-info-text:             $state-info-text !default;
-//$panel-info-border:           $state-info-border !default;
+$panel-info-border:           #ddd;
 //$panel-info-heading-bg:       $state-info-bg !default;
 //
 //$panel-warning-text:          $state-warning-text !default;

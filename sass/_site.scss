@@ -71,6 +71,9 @@ body {
 .site-info {
   text-align: center;
 }
+.entry-header {
+  @extend .page-header;
+}
 .entry-title, .page-title {
   font-size: 36px;
   color: $gray;
