@@ -1995,7 +1995,7 @@ input[type="range"] {
   width: 100%;
 }
 
-select[multiple],
+select[multiple], .gform_wrapper .gform_body > ul .gfield:not(.captcha) select[multiple], .gform_wrapper .gform_body > ul .gfield:not(.captcha) select[size],
 select[size] {
   height: auto;
 }
@@ -2155,9 +2155,12 @@ textarea.input-sm, .input-group-sm > textarea.form-control, .gform_wrapper .gfor
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .gform_wrapper .gform_body > ul .gfield:not(.captcha) .input-group-sm > select[multiple],
+.gform_wrapper .gform_body > ul .gfield:not(.captcha) .input-group-sm > select[size],
 .input-group-sm > select[multiple].input-group-addon,
 .input-group-sm > .input-group-btn > select[multiple].btn,
-.input-group-sm > .input-group-btn > select[multiple].gform_button {
+.input-group-sm > .input-group-btn > select[multiple].gform_button,
+.gform_wrapper .gform_body > ul .gfield:not(.captcha) select.input-sm[multiple],
+.gform_wrapper .gform_body > ul .gfield:not(.captcha) select.input-sm[size] {
   height: auto;
 }
 
@@ -2187,9 +2190,12 @@ textarea.input-lg, .input-group-lg > textarea.form-control, .gform_wrapper .gfor
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .gform_wrapper .gform_body > ul .gfield:not(.captcha) .input-group-lg > select[multiple],
+.gform_wrapper .gform_body > ul .gfield:not(.captcha) .input-group-lg > select[size],
 .input-group-lg > select[multiple].input-group-addon,
 .input-group-lg > .input-group-btn > select[multiple].btn,
-.input-group-lg > .input-group-btn > select[multiple].gform_button {
+.input-group-lg > .input-group-btn > select[multiple].gform_button,
+.gform_wrapper .gform_body > ul .gfield:not(.captcha) select.input-lg[multiple],
+.gform_wrapper .gform_body > ul .gfield:not(.captcha) select.input-lg[size] {
   height: auto;
 }
 
@@ -6457,8 +6463,8 @@ button.close {
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../fonts/fontawesome-webfont.eot?v=4.0.3");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
+  src: url("../vendor/font-awesome/fonts/fontawesome-webfont.eot?v=4.0.3");
+  src: url("../vendor/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.0.3") format("embedded-opentype"), url("../vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3") format("woff"), url("../vendor/font-awesome/fonts/fontawesome-webfont.ttf?v=4.0.3") format("truetype"), url("../vendor/font-awesome/fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -8323,4 +8329,9 @@ a:hover .navbar-icon {
 .active .navbar-icon, .active a:hover .navbar-icon {
   color: #eeeeee;
   background-color: #003399;
+}
+
+li h1, li h2, li h3, li h4, li h5, li h6 {
+  margin-top: 10px;
+  margin-bottom: 0;
 }

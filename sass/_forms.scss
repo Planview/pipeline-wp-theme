@@ -9,6 +9,9 @@
     input:not([type=checkbox]), textarea, select {
       @extend .form-control;
     }
+    select[multiple], select[size] {
+      @extend select[multiple];
+    }
   }
   .ginput_complex {
     @extend .row;
