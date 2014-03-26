@@ -7,8 +7,13 @@
   .widget-title {
     @extend .panel-heading;
     padding:{
+      top: $panel-body-padding;
       left: $panel-body-padding;
       right: $panel-body-padding;
+    }
+    margin: {
+      top: 0;
+      bottom: 0;
     }
   }
   .widget-content {

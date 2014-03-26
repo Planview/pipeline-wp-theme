@@ -4,7 +4,8 @@ body {
     image: url('../img/color-bg.png');
     repeat: no-repeat;
     position: top left;
-    size: 80%;
+    size: 60%;
+    attachment: fixed;
   }
 }
 
@@ -69,4 +70,8 @@ body {
 }
 .site-info {
   text-align: center;
+}
+.entry-title, .page-title {
+  font-size: 36px;
+  color: $gray;
 }

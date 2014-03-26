@@ -44,12 +44,12 @@ function pipeline_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'navbar-left' => __( 'Navbar Menu &ndash Left Side', 'pipeline' ),
-        'navbar-right' => __( 'Navbar Menu &ndash Right Side', 'pipeline' )
+		'navbar-left' => __( 'Navbar Menu &ndash; Left Side', 'pipeline' ),
+        'navbar-right' => __( 'Navbar Menu &ndash; Right Side', 'pipeline' )
 	) );
 
 	// Enable support for Post Formats.
