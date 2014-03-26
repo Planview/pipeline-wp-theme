@@ -27,6 +27,9 @@
   .home & {
     @extend .col-sm-7, .col-sm-pull-5;
   }
+  &.full-width {
+    @extend .col-sm-12;
+  }
 }
 .site-main {
   padding: {
