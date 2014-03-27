@@ -24,7 +24,7 @@
 	<header id="masthead" class="site-header" role="banner">
         <div class="header-content">
             <div class="site-branding">
-                <h1 class="site-title bg-size"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><h1 class="site-title bg-size"><?php bloginfo( 'name' ); ?></h1></a>
                 <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
             </div>
             <aside class="announcements">
