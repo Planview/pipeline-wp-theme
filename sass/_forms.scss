@@ -1,5 +1,5 @@
 /* Forms */
-.gform_wrapper .gform_body > ul {
+.gform_wrapper .gform_body ul {
   @extend .list-unstyled;
   .gfield:not(.captcha) {
     &.gfield_error { @extend .has-error; }
@@ -20,12 +20,6 @@
     input:focus + label { font-weight: bold; }
   }
   #recaptcha_area { margin: 0 auto; }
-}
-.gform_button {
-  @extend .btn;
-  @extend .btn-block;
-  @extend .btn-primary;
-  @extend .btn-lg;
 }
 .validation_error {
   @extend .alert;
@@ -52,4 +46,14 @@
 }
 .gform_validation_container {
   display: none;
+}
+.gform_next_button, .gform_previous_button, .gform_button {
+  @extend .btn, .btn-lg;
+  margin-bottom: 10px;
+}
+.gform_next_button, .gform_button {
+  @extend .pull-right, .btn-success;
+}
+.gform_previous_button {
+  @extend .pull-left, .btn-default;
 }
