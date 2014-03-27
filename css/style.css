@@ -741,7 +741,8 @@ blockquote .small:before {
 .blockquote-reverse,
 blockquote.pull-right,
 blockquote.gform_next_button,
-blockquote.gform_button {
+blockquote.gform_button,
+.entry-content blockquote.alignright {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -754,12 +755,15 @@ blockquote.gform_button {
 blockquote.pull-right footer:before,
 blockquote.gform_next_button footer:before,
 blockquote.gform_button footer:before,
+.entry-content blockquote.alignright footer:before,
 blockquote.pull-right small:before,
 blockquote.gform_next_button small:before,
 blockquote.gform_button small:before,
+.entry-content blockquote.alignright small:before,
 blockquote.pull-right .small:before,
 blockquote.gform_next_button .small:before,
-blockquote.gform_button .small:before {
+blockquote.gform_button .small:before,
+.entry-content blockquote.alignright .small:before {
   content: '';
 }
 .blockquote-reverse footer:after,
@@ -768,12 +772,15 @@ blockquote.gform_button .small:before {
 blockquote.pull-right footer:after,
 blockquote.gform_next_button footer:after,
 blockquote.gform_button footer:after,
+.entry-content blockquote.alignright footer:after,
 blockquote.pull-right small:after,
 blockquote.gform_next_button small:after,
 blockquote.gform_button small:after,
+.entry-content blockquote.alignright small:after,
 blockquote.pull-right .small:after,
 blockquote.gform_next_button .small:after,
-blockquote.gform_button .small:after {
+blockquote.gform_button .small:after,
+.entry-content blockquote.alignright .small:after {
   content: '\00A0 \2014';
 }
 
@@ -3594,7 +3601,7 @@ input[type="button"].btn-block {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
-.dropdown-menu.pull-right, .dropdown-menu.gform_next_button, .dropdown-menu.gform_button {
+.dropdown-menu.pull-right, .dropdown-menu.gform_next_button, .dropdown-menu.gform_button, .entry-content .dropdown-menu.alignright {
   right: 0;
   left: auto;
 }
@@ -3673,7 +3680,7 @@ input[type="button"].btn-block {
   z-index: 990;
 }
 
-.pull-right > .dropdown-menu, .gform_next_button > .dropdown-menu, .gform_button > .dropdown-menu {
+.pull-right > .dropdown-menu, .gform_next_button > .dropdown-menu, .gform_button > .dropdown-menu, .entry-content .alignright > .dropdown-menu {
   right: 0;
   left: auto;
 }
@@ -5004,7 +5011,7 @@ a.list-group-item.active > .badge,
   }
 }
 
-.thumbnail {
+.thumbnail, .entry-content .wp-caption {
   display: block;
   padding: 4px;
   margin-bottom: 20px;
@@ -5015,22 +5022,25 @@ a.list-group-item.active > .badge,
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.thumbnail > img,
-.thumbnail a > img {
+.thumbnail > img, .entry-content .wp-caption > img,
+.thumbnail a > img,
+.entry-content .wp-caption a > img {
   display: block;
   max-width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
 }
-.thumbnail .caption {
+.thumbnail .caption, .entry-content .wp-caption .caption, .entry-content .wp-caption p.wp-caption-text {
   padding: 9px;
   color: #333333;
 }
 
-a.thumbnail:hover,
+a.thumbnail:hover, .entry-content a.wp-caption:hover,
 a.thumbnail:focus,
-a.thumbnail.active {
+.entry-content a.wp-caption:focus,
+a.thumbnail.active,
+.entry-content a.active.wp-caption {
   border-color: #003399;
 }
 
@@ -5223,10 +5233,10 @@ a.thumbnail.active {
   margin: 0 0 5px;
 }
 
-.media > .pull-left, .media > .gform_previous_button {
+.media > .pull-left, .media > .gform_previous_button, .entry-content .media > .alignleft {
   margin-right: 10px;
 }
-.media > .pull-right, .media > .gform_next_button, .media > .gform_button {
+.media > .pull-right, .media > .gform_next_button, .media > .gform_button, .entry-content .media > .alignright {
   margin-left: 10px;
 }
 
@@ -6361,17 +6371,17 @@ button.close {
   clear: both;
 }
 
-.center-block {
+.center-block, .entry-content .aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-.pull-right, .gform_next_button, .gform_button {
+.pull-right, .gform_next_button, .gform_button, .entry-content .alignright {
   float: right !important;
 }
 
-.pull-left, .gform_previous_button {
+.pull-left, .gform_previous_button, .entry-content .alignleft {
   float: left !important;
 }
 
@@ -6608,18 +6618,18 @@ button.close {
   border-radius: .1em;
 }
 
-.pull-right, .gform_next_button, .gform_button {
+.pull-right, .gform_next_button, .gform_button, .entry-content .alignright {
   float: right;
 }
 
-.pull-left, .gform_previous_button {
+.pull-left, .gform_previous_button, .entry-content .alignleft {
   float: left;
 }
 
-.fa.pull-left, .fa.gform_previous_button {
+.fa.pull-left, .fa.gform_previous_button, .entry-content .fa.alignleft {
   margin-right: .3em;
 }
-.fa.pull-right, .fa.gform_next_button, .fa.gform_button {
+.fa.pull-right, .fa.gform_next_button, .fa.gform_button, .entry-content .fa.alignright {
   margin-left: .3em;
 }
 
@@ -8399,6 +8409,17 @@ body {
 }
 
 /* Utilities and WP Default classes */
+.entry-content .alignnone, .entry-content .aligncenter, .entry-content .alignright, .entry-content .alignleft {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.entry-content .alignright {
+  margin-left: 10px;
+}
+.entry-content .alignleft {
+  margin-right: 10px;
+}
+
 .navbar-icon {
   display: inline-block;
   padding: 10px;
