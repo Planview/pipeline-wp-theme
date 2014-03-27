@@ -73,6 +73,7 @@ body {
 }
 .entry-header {
   @extend .page-header;
+  margin-top: 20px;
 }
 .entry-title, .page-title {
   font-size: 36px;

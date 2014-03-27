@@ -4563,8 +4563,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-default {
-  background-color: #eeeeee;
-  border-color: #dddddd;
+  background-color: white;
+  border-color: #d9d9d9;
 }
 .navbar-default .navbar-brand {
   color: #777777;
@@ -4585,7 +4585,7 @@ input[type="button"].btn-block {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
   color: #003399;
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
   color: #cccccc;
@@ -4602,10 +4602,10 @@ input[type="button"].btn-block {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #dddddd;
+  border-color: #d9d9d9;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #dddddd;
+  background-color: #eeeeee;
   color: #003399;
 }
 @media (max-width: 767px) {
@@ -4618,7 +4618,7 @@ input[type="button"].btn-block {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #003399;
-    background-color: #dddddd;
+    background-color: #eeeeee;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #cccccc;
@@ -8349,6 +8349,10 @@ body {
   text-align: center;
 }
 
+.entry-header {
+  margin-top: 20px;
+}
+
 .entry-title, .page-title {
   font-size: 36px;
   color: #555555;
@@ -8398,7 +8402,7 @@ body {
 .widget-area .widget {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  border: 1px solid #dddddd;
+  border: 1px solid #d9d9d9;
 }
 .widget-area .widget-title {
   padding-top: 30px;
@@ -8424,7 +8428,7 @@ body {
   display: inline-block;
   padding: 10px;
   border-radius: 50%;
-  color: #eeeeee;
+  color: white;
   background-color: #666666;
   margin-right: 5px;
   -webkit-box-sizing: border-box;
@@ -8438,7 +8442,7 @@ a:hover .navbar-icon {
   background-color: #333333;
 }
 .active .navbar-icon, .active a:hover .navbar-icon {
-  color: #dddddd;
+  color: #eeeeee;
   background-color: #003399;
 }
 
