@@ -31,7 +31,7 @@ $brand-info:            #59B5E4;
 ////** Background color for `<body>`.
 $body-bg:               #e6e6e6;
 ////** Global text color on `<body>`.
-//$text-color:            $gray-dark !default;
+$text-color:            $gray-dark !default;
 //
 ////** Global textual link color.
 //$link-color:            $brand-primary !default;
@@ -474,7 +474,7 @@ $navbar-default-link-active-color:         $brand-primary;
 //$state-success-bg:               #dff0d8 !default;
 //$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 //
-$state-info-text:                $brand-primary;
+$state-info-text:                $text-color;
 $state-info-bg:                  desaturate(lighten($brand-info, 10%), 5%);
 //$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 //
