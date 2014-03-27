@@ -6,6 +6,9 @@
   color: $navbar-default-bg;
   background-color: $navbar-default-color;
   margin-right: 5px;
+  @include box-sizing(border-box);
+  @include size(40px,40px);
+  text-align: center;
   a:hover & {
     background-color: $navbar-default-link-hover-color;
   }
