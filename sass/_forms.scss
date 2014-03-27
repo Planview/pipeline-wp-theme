@@ -57,3 +57,28 @@
 .gform_previous_button {
   @extend .pull-left, .btn-default;
 }
+.gf_progressbar_title {
+  @extend .h3;
+  margin-top: 5px;
+}
+.gf_progressbar {
+   @extend .progress;
+}
+.gf_progressbar_percentage {
+  @extend .progress-bar;
+  * {
+    @extend .sr-only;
+  }
+}
+.percentbar_blue{
+  @extend .progress-bar-info;
+}
+.percentbar_green{
+  @extend .progress-bar-success;
+}
+.percentbar_orange{
+  @extend .progress-bar-warning;
+}
+.percentbar_red{
+  @extend .progress-bar-danger;
+}

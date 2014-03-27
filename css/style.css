@@ -403,7 +403,7 @@ hr {
   border-top: 1px solid #eeeeee;
 }
 
-.sr-only, .site-description, .screen-reader-text {
+.sr-only, .site-description, .gf_progressbar_percentage *, .screen-reader-text {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -415,7 +415,7 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .gf_progressbar_title, .h4, .h5, .h6 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   line-height: 1.1;
@@ -430,8 +430,9 @@ h5 .small, h6 small,
 h6 .small,
 .h1 small,
 .h1 .small, .h2 small,
-.h2 .small, .h3 small,
-.h3 .small, .h4 small,
+.h2 .small, .h3 small, .gf_progressbar_title small,
+.h3 .small,
+.gf_progressbar_title .small, .h4 small,
 .h4 .small, .h5 small,
 .h5 .small, .h6 small,
 .h6 .small {
@@ -442,7 +443,7 @@ h6 .small,
 
 h1, .h1,
 h2, .h2,
-h3, .h3 {
+h3, .h3, .gf_progressbar_title {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -453,8 +454,9 @@ h2 small,
 h2 .small, .h2 small,
 .h2 .small,
 h3 small,
-h3 .small, .h3 small,
-.h3 .small {
+h3 .small, .h3 small, .gf_progressbar_title small,
+.h3 .small,
+.gf_progressbar_title .small {
   font-size: 65%;
 }
 
@@ -484,7 +486,7 @@ h2, .h2 {
   font-size: 23px;
 }
 
-h3, .h3 {
+h3, .h3, .gf_progressbar_title {
   font-size: 21px;
 }
 
@@ -893,7 +895,7 @@ pre code {
   clear: both;
 }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .widget-area, .announcements, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .home .widget-area, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .gform_wrapper .gform_body ul .ginput_complex .ginput_left, .gform_wrapper .gform_body ul .ginput_complex .ginput_right, .col-xs-7, .col-sm-7, .home .content-area, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .content-area, .site-branding, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .gform_wrapper .gform_body ul .ginput_complex .ginput_left, .gform_wrapper .gform_body ul .ginput_complex .ginput_right, .col-sm-12, .content-area.full-width, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .widget-area, .col-md-3, .announcements, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .home .widget-area, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .gform_wrapper .gform_body ul .ginput_complex .ginput_left, .gform_wrapper .gform_body ul .ginput_complex .ginput_right, .col-xs-7, .col-sm-7, .home .content-area, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .content-area, .col-md-9, .site-branding, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .gform_wrapper .gform_body ul .ginput_complex .ginput_left, .gform_wrapper .gform_body ul .ginput_complex .ginput_right, .col-sm-12, .content-area.full-width, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1109,7 +1111,7 @@ pre code {
 }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .widget-area, .announcements, .col-sm-4, .col-sm-5, .home .widget-area, .col-sm-6, .col-sm-7, .home .content-area, .col-sm-8, .col-sm-9, .content-area, .site-branding, .col-sm-10, .col-sm-11, .col-sm-12, .content-area.full-width {
+  .col-sm-1, .col-sm-2, .col-sm-3, .widget-area, .col-sm-4, .col-sm-5, .home .widget-area, .col-sm-6, .col-sm-7, .home .content-area, .col-sm-8, .col-sm-9, .content-area, .col-sm-10, .col-sm-11, .col-sm-12, .content-area.full-width {
     float: left;
   }
 
@@ -1121,7 +1123,7 @@ pre code {
     width: 16.66667%;
   }
 
-  .col-sm-3, .widget-area, .announcements {
+  .col-sm-3, .widget-area {
     width: 25%;
   }
 
@@ -1145,7 +1147,7 @@ pre code {
     width: 66.66667%;
   }
 
-  .col-sm-9, .content-area, .site-branding {
+  .col-sm-9, .content-area {
     width: 75%;
   }
 
@@ -1318,7 +1320,7 @@ pre code {
   }
 }
 @media (min-width: 992px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-1, .col-md-2, .col-md-3, .announcements, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .site-branding, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
   }
 
@@ -1330,7 +1332,7 @@ pre code {
     width: 16.66667%;
   }
 
-  .col-md-3 {
+  .col-md-3, .announcements {
     width: 25%;
   }
 
@@ -1354,7 +1356,7 @@ pre code {
     width: 66.66667%;
   }
 
-  .col-md-9 {
+  .col-md-9, .site-branding {
     width: 75%;
   }
 
@@ -5130,7 +5132,7 @@ a.thumbnail.active {
     background-position: 0 0;
   }
 }
-.progress {
+.progress, .gf_progressbar {
   overflow: hidden;
   height: 20px;
   margin-bottom: 20px;
@@ -5140,7 +5142,7 @@ a.thumbnail.active {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.progress-bar {
+.progress-bar, .gf_progressbar_percentage {
   float: left;
   width: 0%;
   height: 100%;
@@ -5155,45 +5157,45 @@ a.thumbnail.active {
   transition: width 0.6s ease;
 }
 
-.progress-striped .progress-bar {
+.progress-striped .progress-bar, .progress-striped .gf_progressbar_percentage {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 40px 40px;
 }
 
-.progress.active .progress-bar {
+.progress.active .progress-bar, .active.gf_progressbar .progress-bar, .progress.active .gf_progressbar_percentage, .active.gf_progressbar .gf_progressbar_percentage {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
   animation: progress-bar-stripes 2s linear infinite;
 }
 
-.progress-bar-success {
+.progress-bar-success, .percentbar_green {
   background-color: #479a0f;
 }
-.progress-striped .progress-bar-success {
+.progress-striped .progress-bar-success, .progress-striped .percentbar_green {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-.progress-bar-info {
+.progress-bar-info, .percentbar_blue {
   background-color: #59b5e4;
 }
-.progress-striped .progress-bar-info {
+.progress-striped .progress-bar-info, .progress-striped .percentbar_blue {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-.progress-bar-warning {
+.progress-bar-warning, .percentbar_orange {
   background-color: #f0ad4e;
 }
-.progress-striped .progress-bar-warning {
+.progress-striped .progress-bar-warning, .progress-striped .percentbar_orange {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
-.progress-bar-danger {
+.progress-bar-danger, .percentbar_red {
   background-color: #d9534f;
 }
-.progress-striped .progress-bar-danger {
+.progress-striped .progress-bar-danger, .progress-striped .percentbar_red {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
@@ -6487,7 +6489,7 @@ button.close {
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .hidden-sm, .navbar-icon {
+  .hidden-sm, .announcements, .navbar-icon {
     display: none !important;
   }
 }
@@ -8266,7 +8268,7 @@ button.close {
 
 /* My Styles */
 .header-content {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 #page {
@@ -8379,6 +8381,10 @@ body {
   margin-bottom: 10px;
 }
 
+.gf_progressbar_title {
+  margin-top: 5px;
+}
+
 .widget-area .widget {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -8415,7 +8421,7 @@ a:hover .navbar-icon {
   background-color: #003399;
 }
 
-li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .h4, li .h5, li .h6 {
+li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progressbar_title, li .h4, li .h5, li .h6 {
   margin-top: 10px;
   margin-bottom: 0;
 }

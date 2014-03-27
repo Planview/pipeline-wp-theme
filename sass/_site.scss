@@ -10,7 +10,7 @@ body {
 }
 
 .site-branding {
-  @extend .col-sm-9;
+  @extend .col-md-9;
 }
 .site-title {
   @extend .text-hide;
@@ -37,7 +37,7 @@ body {
   @extend .sr-only;
 }
 .announcements {
-  @extend .col-sm-3, .hidden-xs;
+  @extend .col-md-3, .hidden-xs, .hidden-sm;
 }
 .navbar {
   font: {

@@ -1,7 +1,7 @@
 .header-content{
   @extend .row;
   margin: {
-    top: 20px;
+    top: $grid-gutter-width / 2;
   }
 }
 #page {
