@@ -7,7 +7,8 @@
  * @package PIPELINE
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!--[if lte IE 8]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
