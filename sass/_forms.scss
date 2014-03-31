@@ -1,16 +1,32 @@
 /* Forms */
 .gform_wrapper .gform_body ul {
   @extend .list-unstyled;
-  .gfield:not(.captcha) {
-    &.gfield_error { @extend .has-error; }
-    .gfield_label { @extend .control-label; }
-    @extend .form-group;
-    margin-bottom: 10px;
-    input:not([type=checkbox]), textarea, select {
-      @extend .form-control;
+  @if $ie8 {
+    .gfield {
+      &.gfield_error { @extend .has-error; }
+      .gfield_label { @extend .control-label; }
+      @extend .form-group;
+      margin-bottom: 10px;
+      #{$single-line-text-inputs}, textarea, select {
+        @extend .form-control;
+      }
+      select[multiple], select[size] {
+        @extend select[multiple];
+      }
     }
-    select[multiple], select[size] {
-      @extend select[multiple];
+  }
+  @else {
+    .gfield:not(.captcha) {
+      &.gfield_error { @extend .has-error; }
+      .gfield_label { @extend .control-label; }
+      @extend .form-group;
+      margin-bottom: 10px;
+      input:not([type=checkbox]):not([type=radio]), textarea, select {
+        @extend .form-control;
+      }
+      select[multiple], select[size] {
+        @extend select[multiple];
+      }
     }
   }
   .ginput_complex {

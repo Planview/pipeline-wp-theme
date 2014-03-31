@@ -76,12 +76,14 @@ add_action( 'after_setup_theme', 'pipeline_setup' );
  * Enqueue scripts and styles.
  */
 function pipeline_scripts() {
-    global $pipeline_theme_info;
+    global $pipeline_theme_info, $wp_styles;
 
 	if ( is_admin() ) wp_enqueue_style( 'pipeline-style', get_stylesheet_uri() );
 
     if ( !is_admin() ) {
         wp_enqueue_style( 'pipeline-style', get_stylesheet_directory_uri() . '/css/style.css' );
+        wp_enqueue_style( 'pipeline-style-ie8', get_stylesheet_directory_uri() . '/css/ie8.css' );
+        $wp_styles->add_data( 'pipeline-style-ie8', 'conditional', 'lte IE 8' );
     }
 
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/min/modernizr.min.js', array(), '2.7.2', false);

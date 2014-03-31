@@ -141,3 +141,13 @@ function pipeline_polyfill() {
 <?php
 }
 add_action('wp_head', 'pipeline_polyfill',20);
+
+/**
+ * Conditional Tag for gt IE8 on our style
+ */
+function pipeline_ie_style_conditional($output, $handle) {
+    if ( $handle != 'pipeline-style' ) return $output;
+
+    return "<!--[if gt IE 8]><!-->\n" . $output . "<!--<![endif]-->\n";
+}
+add_filter( 'style_loader_tag', 'pipeline_ie_style_conditional', 10, 2 );
