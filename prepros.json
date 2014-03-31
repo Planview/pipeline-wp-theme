@@ -44,20 +44,6 @@
         "sourcemaps": false
       }
     },
-    "3daad175": {
-      "id": "3daad175",
-      "pid": "b6917f78",
-      "name": "pipeline.js",
-      "input": "js\\pipeline.js",
-      "customOutput": false,
-      "type": "Js",
-      "config": {
-        "autoCompile": true,
-        "uglify": true,
-        "mangle": true,
-        "sourcemaps": false
-      }
-    },
     "fd7c82e1": {
       "id": "fd7c82e1",
       "pid": "b6917f78",
@@ -77,6 +63,54 @@
         "autoprefixer": false,
         "sourcemaps": false
       }
+    },
+    "421e66e2": {
+      "id": "421e66e2",
+      "pid": "b6917f78",
+      "name": "selectivizr.js",
+      "input": "js\\selectivizr.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
+    },
+    "7b4cd64b": {
+      "id": "7b4cd64b",
+      "pid": "b6917f78",
+      "name": "ie8.scss",
+      "input": "sass\\ie8.scss",
+      "customOutput": false,
+      "type": "Scss",
+      "config": {
+        "autoCompile": true,
+        "lineNumbers": false,
+        "unixNewlines": false,
+        "debug": false,
+        "compass": false,
+        "fullCompass": false,
+        "compassConfigRb": false,
+        "outputStyle": "expanded",
+        "autoprefixer": false,
+        "sourcemaps": false
+      }
+    },
+    "3daad175": {
+      "id": "3daad175",
+      "pid": "b6917f78",
+      "name": "pipeline.js",
+      "input": "js\\pipeline.js",
+      "customOutput": false,
+      "type": "Js",
+      "config": {
+        "autoCompile": true,
+        "uglify": true,
+        "mangle": true,
+        "sourcemaps": false
+      }
     }
   },
   "imports": {
@@ -85,7 +119,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_pagination.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "17060694": {
@@ -93,7 +128,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_grid.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "87906939": {
@@ -101,7 +137,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_mixins.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "d521b52b": {
@@ -110,22 +147,6 @@
       "path": "vendor\\modernizr\\modernizr.js",
       "parents": [
         "1d3c41d6"
-      ]
-    },
-    "63951a8c": {
-      "id": "63951a8c",
-      "pid": "b6917f78",
-      "path": "js\\src\\navigation.js",
-      "parents": [
-        "3daad175"
-      ]
-    },
-    "c1d8056a": {
-      "id": "c1d8056a",
-      "pid": "b6917f78",
-      "path": "js\\src\\skip-link-focus-fix.js",
-      "parents": [
-        "3daad175"
       ]
     },
     "5ecc8439": {
@@ -229,7 +250,8 @@
       "pid": "b6917f78",
       "path": "sass\\_variables.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "365066e9": {
@@ -237,7 +259,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "3e08171c": {
@@ -245,7 +268,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_variables.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "0d20dd8e": {
@@ -253,7 +277,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_mixins.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "5f0690e0": {
@@ -261,7 +286,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_normalize.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "a2e34e6f": {
@@ -269,7 +295,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_print.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "c57581ef": {
@@ -277,7 +304,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_scaffolding.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "b8466163": {
@@ -285,7 +313,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_type.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "ff19c5cf": {
@@ -293,7 +322,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_code.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "50b01746": {
@@ -301,7 +331,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_tables.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "94431ae3": {
@@ -309,7 +340,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_forms.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "54ebfc5f": {
@@ -317,7 +349,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_buttons.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "4c99d7cb": {
@@ -325,7 +358,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_component-animations.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "271e06c1": {
@@ -333,7 +367,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_glyphicons.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "384ac1cb": {
@@ -341,7 +376,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_dropdowns.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "9a5e2144": {
@@ -349,7 +385,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_button-groups.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "b0995263": {
@@ -357,7 +394,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_input-groups.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "b304e4f2": {
@@ -365,7 +403,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_navs.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "49b06b33": {
@@ -373,7 +412,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_navbar.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "bff6a859": {
@@ -381,7 +421,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_breadcrumbs.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "9228c061": {
@@ -389,7 +430,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_pager.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "e9f0e998": {
@@ -397,7 +439,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_labels.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "04806113": {
@@ -405,7 +448,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_badges.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "b489ab72": {
@@ -413,7 +457,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_jumbotron.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "099e2d52": {
@@ -421,7 +466,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_thumbnails.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "f746ce76": {
@@ -429,7 +475,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_alerts.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "2bff8825": {
@@ -437,7 +484,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_progress-bars.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "75c9087b": {
@@ -445,7 +493,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_media.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "00d23910": {
@@ -453,7 +502,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_list-group.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "4c99bd45": {
@@ -461,7 +511,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_panels.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "402913ea": {
@@ -469,7 +520,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_wells.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "bd4785d9": {
@@ -477,7 +529,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_close.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "2e4e6e53": {
@@ -485,7 +538,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_modals.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "5118df68": {
@@ -493,7 +547,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_tooltip.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "f3a0c380": {
@@ -501,7 +556,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_popovers.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "f63cd39c": {
@@ -509,7 +565,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_carousel.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "24e08f98": {
@@ -517,7 +574,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_utilities.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "60a5fa2c": {
@@ -525,7 +583,8 @@
       "pid": "b6917f78",
       "path": "vendor\\bootstrap-sass-official\\vendor\\assets\\stylesheets\\bootstrap\\_responsive-utilities.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "7f9d36f2": {
@@ -533,7 +592,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\font-awesome.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "9d583984": {
@@ -541,7 +601,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_variables.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "15d43edb": {
@@ -549,7 +610,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_path.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "8847f9e3": {
@@ -557,7 +619,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_core.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "238dbb13": {
@@ -565,7 +628,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_larger.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "f8d5fa52": {
@@ -573,7 +637,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_fixed-width.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "23fba6a4": {
@@ -581,7 +646,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_list.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "ffafcf67": {
@@ -589,7 +655,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_bordered-pulled.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "992c55be": {
@@ -597,7 +664,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_spinning.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "a27246de": {
@@ -605,7 +673,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_rotated-flipped.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "9bcb31ce": {
@@ -613,7 +682,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_stacked.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "a344d664": {
@@ -621,7 +691,8 @@
       "pid": "b6917f78",
       "path": "vendor\\font-awesome\\scss\\_icons.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "857fb4b4": {
@@ -629,7 +700,8 @@
       "pid": "b6917f78",
       "path": "sass\\_layout.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "efaeca42": {
@@ -637,7 +709,8 @@
       "pid": "b6917f78",
       "path": "sass\\_site.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "a0aef7d1": {
@@ -645,7 +718,8 @@
       "pid": "b6917f78",
       "path": "sass\\_forms.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "33410a8c": {
@@ -653,7 +727,8 @@
       "pid": "b6917f78",
       "path": "sass\\_widgets.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "5fe72ffa": {
@@ -661,7 +736,8 @@
       "pid": "b6917f78",
       "path": "sass\\_base.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
       ]
     },
     "aab0af27": {
@@ -669,7 +745,32 @@
       "pid": "b6917f78",
       "path": "sass\\_misc.scss",
       "parents": [
-        "fd7c82e1"
+        "fd7c82e1",
+        "7b4cd64b"
+      ]
+    },
+    "fd7c82e1": {
+      "id": "fd7c82e1",
+      "pid": "b6917f78",
+      "path": "sass\\style.scss",
+      "parents": [
+        "7b4cd64b"
+      ]
+    },
+    "63951a8c": {
+      "id": "63951a8c",
+      "pid": "b6917f78",
+      "path": "js\\src\\navigation.js",
+      "parents": [
+        "3daad175"
+      ]
+    },
+    "c1d8056a": {
+      "id": "c1d8056a",
+      "pid": "b6917f78",
+      "path": "js\\src\\skip-link-focus-fix.js",
+      "parents": [
+        "3daad175"
       ]
     }
   },

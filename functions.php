@@ -5,6 +5,10 @@
  * @package PIPELINE
  */
 
+
+/**
+ * Set up the theme info to use for stuff
+ */
 function pipeline_theme_info() {
     global $pipeline_theme_info;
     $pipeline_theme_info = wp_get_theme();
