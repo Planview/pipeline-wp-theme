@@ -151,3 +151,11 @@ function pipeline_ie_style_conditional($output, $handle) {
     return "<!--[if gt IE 8]><!-->\n" . $output . "<!--<![endif]-->\n";
 }
 add_filter( 'style_loader_tag', 'pipeline_ie_style_conditional', 10, 2 );
+
+function pipeline_banner_image( $post_id ) {
+    if ( !is_page() || !is_front_page() ) return;
+    if ( has_post_thumbnail( $post_id ) ) {
+        the_post_thumbnail('full', array('class' => 'aligncenter img-responsive center-block hidden-xs'));
+    }
+}
+add_action( 'pipeline_above_content_header', 'pipeline_banner_image', 10, 1 );

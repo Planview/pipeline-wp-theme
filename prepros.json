@@ -64,20 +64,6 @@
         "sourcemaps": false
       }
     },
-    "421e66e2": {
-      "id": "421e66e2",
-      "pid": "b6917f78",
-      "name": "selectivizr.js",
-      "input": "js\\selectivizr.js",
-      "customOutput": false,
-      "type": "Js",
-      "config": {
-        "autoCompile": true,
-        "uglify": true,
-        "mangle": true,
-        "sourcemaps": false
-      }
-    },
     "7b4cd64b": {
       "id": "7b4cd64b",
       "pid": "b6917f78",
