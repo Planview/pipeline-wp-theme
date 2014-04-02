@@ -25,3 +25,26 @@ li {
     }
   }
 }
+
+.home-callout {
+  background-color: lighten($gray-light, 10%);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: $border-radius-large;
+  .callout-body {
+    background-color: white;
+    // border: darken($gray-light, 10%) 1px solid;
+    @include box-shadow(0 0 10px darken($gray-light, 10%));
+    padding: 10px 20px;
+    li {
+      border-bottom: lighten($gray-light, 10%) 1px solid;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+  .callout-title {
+    color: #fff;
+    margin-top: 0;
+  }
+}

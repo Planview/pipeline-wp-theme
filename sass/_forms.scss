@@ -31,7 +31,7 @@
   }
   .ginput_complex {
     @extend .row;
-    .ginput_left, .ginput_right { @extend .col-lg-6; @extend .col-xs-12; }
+    .ginput_left, .ginput_right { @extend .col-xs-12; }
     label { font-weight: normal; margin-bottom: 0; }
     input:focus + label { font-weight: bold; }
   }
