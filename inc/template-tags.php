@@ -152,6 +152,11 @@ function pipeline_ie_style_conditional($output, $handle) {
 }
 add_filter( 'style_loader_tag', 'pipeline_ie_style_conditional', 10, 2 );
 
+/**
+ * Adds a banner image to the homepage
+ *
+ * @param $post_id
+ */
 function pipeline_banner_image( $post_id ) {
     if ( !is_page() || !is_front_page() ) return;
     if ( has_post_thumbnail( $post_id ) ) {
