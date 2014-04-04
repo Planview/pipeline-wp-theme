@@ -25,7 +25,39 @@ li {
     }
   }
 }
-
+.navbar-brand {
+  display: block;
+  height: 60px;
+  width: 60px * (214px / 82px);
+  @include text-hide();
+  background: {
+    origin: content-box;
+    repeat: no-repeat;
+    size: contain;
+    image: url('../img/pipeline-logo.png');
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    display: none;
+    .home & {
+      background-image: url('../img/header-wide.png');
+      display: block;
+      height: 40px;
+      width: (848px / 95px) * 20px + 30px;
+    }
+  }
+  @media screen and (min-width: $screen-md-min) {
+    .home &{
+      height: 60px;
+      width: (848px / 95px) * 40px + 30px;
+    }
+  }
+}
+.navbar-toggle {
+  margin: {
+    top: 13px;
+    bottom: 13px;
+  }
+}
 .home-callout {
   background-color: lighten($gray-light, 10%);
   padding: 15px;
