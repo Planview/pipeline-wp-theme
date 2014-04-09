@@ -2,23 +2,12 @@
 /**
  * The Header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * Displays from the start of the <body> to <div id="content">, also calls <head> code from header-head.php
  *
  * @package PIPELINE
  */
-?><!DOCTYPE html>
-<!--[if lte IE 8]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
-<?php wp_head(); ?>
-</head>
-
+?>
+<?php get_header('head'); ?>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
@@ -38,7 +27,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only"><?php _e('Toggle navigation', 'pipeline'); ?></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -52,7 +41,8 @@
                             'fallback_cb'       =>  false,
                             'menu_class'        =>  'nav navbar-nav',
                             'depth'             =>  2,
-                            'walker'            =>  new Pipeline_Bootstrap_Nav_Walker()
+                            'walker'            =>  new Pipeline_Bootstrap_Nav_Walker(),
+                            'container'         =>  false,
                         )
                     ); ?>
                     <?php wp_nav_menu(
@@ -61,7 +51,8 @@
                             'fallback_cb'       =>  false,
                             'menu_class'        =>  'nav navbar-nav navbar-right',
                             'depth'             =>  2,
-                            'walker'            =>  new Pipeline_Bootstrap_Nav_Walker()
+                            'walker'            =>  new Pipeline_Bootstrap_Nav_Walker(),
+                            'container'         =>  false,
                         )
                     ); ?>
                 </div><!-- /.navbar-collapse -->
