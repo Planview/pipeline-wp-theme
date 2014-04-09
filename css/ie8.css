@@ -8495,6 +8495,43 @@ li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progres
   margin-bottom: 0;
 }
 
+.navbar-brand {
+  display: block;
+  height: 60px;
+  width: 156.58537px;
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/pipeline-logo.png");
+}
+@media screen and (min-width: 768px) {
+  .navbar-brand {
+    display: none;
+  }
+  .home .navbar-brand {
+    background-image: url("../img/header-wide.png");
+    display: block;
+    height: 40px;
+    width: 208.52632px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .home .navbar-brand {
+    height: 60px;
+    width: 387.05263px;
+  }
+}
+
+.navbar-toggle {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
 .home-callout {
   background-color: #b3b3b3;
   padding: 15px;
