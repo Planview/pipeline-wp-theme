@@ -80,3 +80,6 @@ li {
     margin-top: 0;
   }
 }
+*:focus:not(a):not(input):not(select):not(textarea):not(button) {
+  outline: 0;
+}

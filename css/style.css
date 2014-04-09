@@ -8503,6 +8503,10 @@ li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progres
   margin-top: 0;
 }
 
+*:focus:not(a):not(input):not(select):not(textarea):not(button) {
+  outline: 0;
+}
+
 body.home {
   color: #5a5a5a;
 }
@@ -8687,4 +8691,38 @@ body.home {
 
 .carousel-caption {
   z-index: 10;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.carousel-image.top-left {
+  background-position: top left;
+}
+.carousel-image.top-right {
+  background-position: top right;
+}
+.carousel-image.bottom-left {
+  background-position: bottom left;
+}
+.carousel-image.bottom-right {
+  background-position: bottom right;
+}
+.carousel-image.right {
+  background-position: center right;
+}
+.carousel-image.left {
+  background-position: center left;
+}
+.carousel-image.top {
+  background-position: center top;
+}
+.carousel-image.bottom {
+  background-position: center bottom;
+}
+.carousel-image.center {
+  background-position: center center;
 }

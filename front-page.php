@@ -66,7 +66,7 @@ get_header( 'head' ); ?>
             <?php while ( have_rows('front_carousel') ) : the_row(); ?>
                 <div class="item <?php echo ( 0 === $pipeline_carousel_slide_count ? 'active' : '' ); $pipeline_carousel_slide_count += 1; ?>">
                     <?php $pipeline_carousel_image = get_sub_field('carousel_image'); ?>
-                    <img src="<?php echo $pipeline_carousel_image['url'] ?>" class="img-responsive <?php the_sub_field( 'carousel_image_position' ); ?>" alt="<?php echo esc_attr( $pipeline_carousel_image['alt'] ); ?>">
+                    <div class="carousel-image bg-size <?php the_sub_field( 'carousel_image_position' ); ?>" style="background-image:url(<?php echo esc_url( $pipeline_carousel_image['url'] ); ?>)"></div>
                     <div class="container">
                         <div class="carousel-caption"><?php the_sub_field('carousel_caption'); ?></div>
                     </div>
@@ -112,12 +112,19 @@ get_header( 'head' ); ?>
                     $pipeline_featurette_count += 1;
                     $pipeline_featurette_image = get_sub_field( 'featurette_image' );
                     ?>
-                    <div class="featurette <?php echo $pipeline_featurette_alignment ?>">
+                    <div class="featurette <?php echo $pipeline_featurette_alignment ?>" id="<?php echo esc_attr( the_sub_field( 'featurette_id' ) ); ?>">
                         <div class="featurette-image-wrap">
-                            <?php printf(
-                                '<img class="featurette-image img-circle" src="%s" alt="%s" />',
+                            <?php
+                            printf(
+                                (
+                                    get_sub_field( 'featurette_image_link' ) ?
+                                    '<a href="%3$s" class="%4$s"><img class="featurette-image img-circle" src="%1$s" alt="%2$s" /></a>' :
+                                    '<img class="featurette-image img-circle" src="%s" alt="%s" />'
+                                ),
                                 esc_url( $pipeline_featurette_image['url'] ),
-                                esc_attr( $pipeline_featurette_image['alt'] )
+                                esc_attr( $pipeline_featurette_image['alt'] ),
+                                esc_url( get_sub_field( 'featurette_image_link_url' ) ),
+                                esc_url( get_sub_field( 'featurette_image_link_class' ) )
                             ); ?>
                         </div>
                         <article class="featurette-content">

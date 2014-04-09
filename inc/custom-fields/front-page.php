@@ -94,12 +94,17 @@ register_field_group(array (
                     'type' => 'radio',
                     'required' => 1,
                     'choices' => array (
+                        'center' => 'Anchor Center',
+                        'top' => 'Anchor Top',
+                        'bottom' => 'Anchor Bottom',
+                        'left' => 'Anchor Left',
+                        'right' => 'Anchor Right',
                         'top-left' => 'Anchor Top Left',
                         'top-right' => 'Anchor Top Right',
                         'bottom-left' => 'Anchor Bottom Left',
                         'bottom-right' => 'Anchor Bottom Right',
                     ),
-                    'default_value' => 'top-left',
+                    'default_value' => 'center',
                     'layout' => 'vertical',
                 ),
                 array (
