@@ -53,7 +53,8 @@ function pipeline_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'navbar-left' => __( 'Navbar Menu &ndash; Left Side', 'pipeline' ),
-        'navbar-right' => __( 'Navbar Menu &ndash; Right Side', 'pipeline' )
+        'navbar-right' => __( 'Navbar Menu &ndash; Right Side', 'pipeline' ),
+        'navbar-front' => __( 'Navbar Menu &ndash; Front Page Only (Right)', 'pipeline' ),
 	) );
 
 	// Enable support for Post Formats.

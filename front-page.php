@@ -4,19 +4,143 @@
  * User: scrockett
  * Date: 3/24/14
  * Time: 11:51 AM
+ *
+ * Template Name: Front Page
  */
 
-get_header(); ?>
-<?php get_sidebar('front'); ?>
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
+get_header( 'head' ); ?>
+<body <?php body_class(); ?>>
+    <?php
+    /*
+     * Navbar
+     */
+    ?>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only"><?php _e( 'Toggle navigation', 'pipeline' ); ?></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <?php wp_nav_menu(
+                            array(
+                                'theme_location'    =>  'navbar-front',
+                                'fallback_cb'       =>  false,
+                                'menu_class'        =>  'nav navbar-nav navbar-right',
+                                'depth'             =>  2,
+                                'walker'            =>  new Pipeline_Bootstrap_Nav_Walker(),
+                                'container'         =>  false,
+                            )
+                        ); ?>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
 
-            <?php while ( have_posts() ) : the_post(); ?>
+    <?php
+    /*
+     * Carousel
+     */
+    if ( have_rows( 'front_carousel' ) ) :
+        $pipeline_carousel_slides = get_field( 'front_carousel' );
+    ?>
+    <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators">
+            <?php for ( $i = 0, $ii = count($pipeline_carousel_slides); $i < $ii; $i += 1 ) : ?>
+                <li data-target="#myCarousel" data-slide-to="0" <?php echo (0 == $i ? 'class="active"' : ''); ?>></li>
+            <?php endfor; ?>
+        </ol>
 
-                <?php get_template_part( 'content', 'page' ); ?>
+        <?php $pipeline_carousel_slide_count = 0; ?>
+        <div class="carousel-inner">
+            <?php while ( have_rows('front_carousel') ) : the_row(); ?>
+                <div class="item <?php echo ( 0 === $pipeline_carousel_slide_count ? 'active' : '' ); $pipeline_carousel_slide_count += 1; ?>">
+                    <?php $pipeline_carousel_image = get_sub_field('carousel_image'); ?>
+                    <img src="<?php echo $pipeline_carousel_image['url'] ?>" class="img-responsive">
+                    <div class="container">
+                        <?php the_sub_field('carousel_caption'); ?>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </div>
+    <?php endif; /* Carousel */ ?>
 
-            <?php endwhile; // end of the loop. ?>
+    <div class="home-wrapper">
+        <div class="container marketing">
+            <?php
+            /*
+             * Front Page Columns
+             */
+            if ( have_rows( 'front_columns' ) ) :
+            ?>
+                <div class="row">
+                    <?php while ( have_rows( 'front_columns' ) ) : the_row(); ?>
+                        <div class="col-md-4 text-center">
+                            <?php the_sub_field( 'columns_content' ); ?>
+                        </div>
+                    <?php endwhile; ?>
+                </div><!-- /.row -->
+            <?php endif; ?>
 
-        </main><!-- #main -->
-    </div><!-- #primary -->
-<?php get_footer();
+            <hr class="featurette-divider">
+
+            <?php
+            /*
+             * Featurettes
+             */
+            if ( have_rows( 'front_featurettes' ) ) :
+                $pipeline_featurette_count = 0;
+                while ( have_rows( 'front_featurettes' ) ) : the_row();
+                    $pipeline_featurette_alignment = ( 1 == $pipeline_featurette_count % 2 ? 'pull-left' : 'pull-right' );
+                    $pipeline_featurette_count += 1;
+                    $pipeline_featurette_image = get_sub_field( 'featurette_image' );
+                    ?>
+                    <div class="featurette">
+                        <?php printf(
+                            '<img class="featurette-image img-circle %1$s" src="%2$s" />',
+                            $pipeline_featurette_alignment,
+                            esc_url($pipeline_featurette_image['url'])
+                        ); ?>
+                        <h2 class="featurette-heading"><?php the_sub_field('featurette_title'); ?></h2>
+                        <?php the_sub_field('featurette_content'); ?>
+                    </div>
+
+                    <hr class="featurette-divider">
+                <?php endwhile;
+            endif; ?>
+
+            <div class="container" style="margin-bottom:80px">
+                <?php the_field( 'front_below' ); ?>
+            </div>
+
+            <footer id="colophon" class="site-footer" role="contentinfo">
+                <div class="sponsors">
+                    <?php the_field('pipeline_footer_content', 'option'); ?>
+                </div>
+                <div class="site-info">
+                    <?php printf( __( 'Copyright &copy; %s PIPELINE Conference. All rights reserved.', 'pipeline' ), date('Y') ); ?>
+                </div><!-- .site-info -->
+            </footer><!-- #colophon -->
+        </div><!-- .marketing -->
+    </div><!-- .home-wrapper -->
+
+    <?php wp_footer(); ?>
+</body>
+</html>
