@@ -21,6 +21,21 @@ jQuery(document).ready(function ($) {
     }
 });
 
+//  Smooth scroll for page anchors
+jQuery(document).ready(function($){
+    $('html').on('click', 'a[href^="#"]',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+            $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+});
 
 // @codekit-append src/navigation.js
 // @codekit-append src/skip-link-focus-fix.js
