@@ -87,3 +87,11 @@ function pipeline_setup_author() {
 	}
 }
 add_action( 'wp', 'pipeline_setup_author' );
+
+/**
+ * Add a custom style sheet onto the TinyMCE Editor
+ */
+function pipeline_add_editor_styles() {
+    add_editor_style( 'css/editor.css' );
+}
+add_action( 'init', 'pipeline_add_editor_styles' );
