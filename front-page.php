@@ -66,9 +66,9 @@ get_header( 'head' ); ?>
             <?php while ( have_rows('front_carousel') ) : the_row(); ?>
                 <div class="item <?php echo ( 0 === $pipeline_carousel_slide_count ? 'active' : '' ); $pipeline_carousel_slide_count += 1; ?>">
                     <?php $pipeline_carousel_image = get_sub_field('carousel_image'); ?>
-                    <img src="<?php echo $pipeline_carousel_image['url'] ?>" class="img-responsive">
+                    <img src="<?php echo $pipeline_carousel_image['url'] ?>" class="img-responsive <?php the_sub_field( 'carousel_image_position' ); ?>" alt="<?php echo esc_attr( $pipeline_carousel_image['alt'] ); ?>">
                     <div class="container">
-                        <?php the_sub_field('carousel_caption'); ?>
+                        <div class="carousel-caption"><?php the_sub_field('carousel_caption'); ?></div>
                     </div>
                 </div>
             <?php endwhile; ?>
@@ -92,7 +92,7 @@ get_header( 'head' ); ?>
             ?>
                 <div class="row">
                     <?php while ( have_rows( 'front_columns' ) ) : the_row(); ?>
-                        <div class="col-md-4 text-center">
+                        <div class="mini-item text-center">
                             <?php the_sub_field( 'columns_content' ); ?>
                         </div>
                     <?php endwhile; ?>
@@ -108,18 +108,22 @@ get_header( 'head' ); ?>
             if ( have_rows( 'front_featurettes' ) ) :
                 $pipeline_featurette_count = 0;
                 while ( have_rows( 'front_featurettes' ) ) : the_row();
-                    $pipeline_featurette_alignment = ( 1 == $pipeline_featurette_count % 2 ? 'pull-left' : 'pull-right' );
+                    $pipeline_featurette_alignment = ( 1 == $pipeline_featurette_count % 2 ? 'image-left' : 'image-right' );
                     $pipeline_featurette_count += 1;
                     $pipeline_featurette_image = get_sub_field( 'featurette_image' );
                     ?>
-                    <div class="featurette">
-                        <?php printf(
-                            '<img class="featurette-image img-circle %1$s" src="%2$s" />',
-                            $pipeline_featurette_alignment,
-                            esc_url($pipeline_featurette_image['url'])
-                        ); ?>
-                        <h2 class="featurette-heading"><?php the_sub_field('featurette_title'); ?></h2>
-                        <?php the_sub_field('featurette_content'); ?>
+                    <div class="featurette <?php echo $pipeline_featurette_alignment ?>">
+                        <div class="featurette-image-wrap">
+                            <?php printf(
+                                '<img class="featurette-image img-circle" src="%s" alt="%s" />',
+                                esc_url( $pipeline_featurette_image['url'] ),
+                                esc_attr( $pipeline_featurette_image['alt'] )
+                            ); ?>
+                        </div>
+                        <article class="featurette-content">
+                            <h2 class="featurette-heading"><?php the_sub_field('featurette_title'); ?></h2>
+                            <?php the_sub_field('featurette_content'); ?>
+                        </article>
                     </div>
 
                     <hr class="featurette-divider">

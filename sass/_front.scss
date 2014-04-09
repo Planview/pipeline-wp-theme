@@ -1,0 +1,131 @@
+body.home {
+  color: #5a5a5a;
+  @media screen and (min-width: $screen-sm-min) {
+    position: relative;
+  }
+}
+/* Navbar */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  .admin-bar & {
+    top: 46px;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    .admin-bar & {
+      top: 0;
+    }
+    margin: {
+      top: 20px;
+      bottom: -90px;
+    }
+  }
+}
+.home-wrapper {
+  background-color: rgba(255,255,255,0.95);
+  padding-top: 60px;
+}
+.marketing {
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+  .mini-item {
+    @include make-lg-column(4);
+    text-align: center;
+    margin-bottom: 20px;
+    p {
+      margin: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+  }
+  h2 {
+    font-weight: normal;
+  }
+}
+.featurette {
+  @include make-row();
+}
+.featurette-image-wrap {
+  @include make-md-column(5);
+  .image-right & {
+    @include make-md-column-push(7);
+  }
+}
+.featurette-image {
+  @include img-responsive();
+  @include center-block();
+}
+.featurette-content {
+  @include make-md-column(7);
+  padding-top: 40px;
+  @media screen and (min-width: $screen-md-min) {
+    padding-top: 120px;
+    .image-right & {
+      @include make-md-column-pull(5);
+      padding-right: 40px;
+    }
+    .image-left & {
+      padding-left: 40px;
+    }
+  }
+}
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.carousel {
+  .item {
+    height: 400px;
+    background-color:#555;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 400px;
+    &.top-left {
+      top: 0;
+      left: 0;
+    }
+    &.top-right {
+      top: 0;
+      right: 0;
+    }
+    &.bottom-left {
+      bottom: 0;
+      left: 0;
+    }
+    &.bottom-right {
+      bottom: 0;
+      right: 0;
+    }
+  }
+  p {
+    @media screen and (min-width: $screen-sm-min) {
+      margin-bottom: 20px;
+      font-size: 21px;
+      line-height: 1.4;
+    }
+  }
+}
+.carousel-caption {
+  z-index: 10;
+}
