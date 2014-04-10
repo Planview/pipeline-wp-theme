@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
 
 //  Smooth scroll for page anchors
 jQuery(document).ready(function($){
-    $('html').on('click', 'a[href^="#"]',function (e) {
+    $('html').on('click', 'a.scroll-anchor',function (e) {
         e.preventDefault();
 
         var target = this.hash,
