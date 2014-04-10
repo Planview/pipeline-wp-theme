@@ -8498,7 +8498,7 @@ li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progres
 .navbar-brand {
   display: block;
   height: 60px;
-  width: 156.58537px;
+  width: 134.39024px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -8514,16 +8514,15 @@ li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progres
     display: none;
   }
   .home .navbar-brand {
-    background-image: url("../img/header-wide.png");
     display: block;
     height: 40px;
-    width: 208.52632px;
+    width: 82.19512px;
   }
 }
 @media screen and (min-width: 992px) {
   .home .navbar-brand {
     height: 60px;
-    width: 387.05263px;
+    width: 134.39024px;
   }
 }
 
