@@ -82,3 +82,34 @@ li {
 *:focus:not(a):not(input):not(select):not(textarea):not(button) {
   outline: 0;
 }
+
+.fixed-link {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: {
+    left: 40px;
+    right: 40px;
+  }
+  a {
+    display: inline-block;
+    background-color: $brand-success;
+    padding: {
+      top: 10px;
+      bottom: 10px;
+      left: 20px;
+      right: 20px;
+    }
+    @include border-top-radius($border-radius-large);
+    @include box-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+    font: {
+      family: $headings-font-family;
+      weight: 400;
+      size: 20px;
+    }
+    color: white;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+}

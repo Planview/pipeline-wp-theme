@@ -118,8 +118,8 @@ get_header( 'head' ); ?>
                             printf(
                                 (
                                     get_sub_field( 'featurette_image_link' ) ?
-                                    '<a href="%3$s" class="%4$s"><img class="featurette-image img-circle" src="%1$s" alt="%2$s" /></a>' :
-                                    '<img class="featurette-image img-circle" src="%s" alt="%s" />'
+                                    '<a href="%3$s" class="%4$s"><img class="featurette-image" src="%1$s" alt="%2$s" /></a>' :
+                                    '<img class="featurette-image" src="%s" alt="%s" />'
                                 ),
                                 esc_url( $pipeline_featurette_image['url'] ),
                                 esc_attr( $pipeline_featurette_image['alt'] ),
@@ -140,6 +140,12 @@ get_header( 'head' ); ?>
             <div class="container" style="margin-bottom:80px">
                 <?php the_field( 'front_below' ); ?>
             </div>
+
+            <?php if ( get_field( 'float_tab_title' ) ) : ?>
+                <div class="fixed-link">
+                    <a href="<?php echo esc_url( get_field( 'float_tab_link_url' ) ); ?>" class="scroll-anchor"><?php the_field( 'float_tab_title' ); ?></a>
+                </div>
+            <?php endif; ?>
 
             <footer id="colophon" class="site-footer" role="contentinfo">
                 <div class="sponsors">
