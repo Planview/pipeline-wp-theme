@@ -28,7 +28,11 @@ li {
 .navbar-brand {
   display: block;
   height: 60px;
-  width: 40px * (214px / 82px) + 30px;
+  padding: {
+    top: 5px;
+    bottom: 5px;
+  }
+  width: 50px * (214px / 82px) + 30px;
   @include text-hide();
   background: {
     origin: content-box;
@@ -41,13 +45,13 @@ li {
     .home & {
       display: block;
       height: 40px;
-      width: (214px / 82px) * 20px + 30px;
+      width: (214px / 82px) * 30px + 30px;
     }
   }
   @media screen and (min-width: $screen-md-min) {
     .home &{
       height: 60px;
-      width: (214px / 82px) * 40px + 30px;
+      width: (214px / 82px) * 50px + 30px;
     }
   }
 }

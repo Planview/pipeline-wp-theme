@@ -8498,7 +8498,9 @@ li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progres
 .navbar-brand {
   display: block;
   height: 60px;
-  width: 134.39024px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 160.4878px;
   font: 0/0 a;
   color: transparent;
   text-shadow: none;
@@ -8516,13 +8518,13 @@ li h1, li h2, li h3, li h4, li h5, li h6, li .h1, li .h2, li .h3, li .gf_progres
   .home .navbar-brand {
     display: block;
     height: 40px;
-    width: 82.19512px;
+    width: 108.29268px;
   }
 }
 @media screen and (min-width: 992px) {
   .home .navbar-brand {
     height: 60px;
-    width: 134.39024px;
+    width: 160.4878px;
   }
 }
 
@@ -8645,6 +8647,11 @@ body.home {
     width: 33.33333%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .marketing .mini-item {
+    margin-bottom: 0;
+  }
+}
 .marketing .mini-item p {
   margin-left: 10px;
   margin-right: 10px;
@@ -8697,7 +8704,6 @@ body.home {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 40px;
 }
 @media (min-width: 992px) {
   .featurette-content {
@@ -8706,9 +8712,6 @@ body.home {
   }
 }
 @media screen and (min-width: 992px) {
-  .featurette-content {
-    padding-top: 120px;
-  }
   .image-right .featurette-content {
     padding-right: 40px;
   }
@@ -8722,15 +8725,23 @@ body.home {
   }
 }
 
+.featurette-header-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 .featurette-heading {
   font-size: 50px;
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+  margin-top: 10px;
 }
 
 .featurette-divider {
-  margin: 80px 0;
+  margin: 40px 0;
   /* Space out the Bootstrap <hr> more */
 }
 

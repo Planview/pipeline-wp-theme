@@ -128,6 +128,13 @@ get_header( 'head' ); ?>
                             ); ?>
                         </div>
                         <article class="featurette-content">
+                            <?php if ( $pipeline_featurette_header_image = get_sub_field( 'featurette_header_image' ) ) {
+                                printf(
+                                    '<img class="featurette-header-image" src="%1$s" alt="%2$s" />',
+                                    esc_url( $pipeline_featurette_header_image['url'] ),
+                                    esc_attr( $pipeline_featurette_header_image['alt'] )
+                                );
+                            } ?>
                             <h2 class="featurette-heading"><?php the_sub_field('featurette_title'); ?></h2>
                             <?php the_sub_field('featurette_content'); ?>
                         </article>

@@ -44,6 +44,9 @@ body.home {
     @include make-lg-column(4);
     text-align: center;
     margin-bottom: 20px;
+    @media screen and (min-width: $screen-lg-min) {
+      margin-bottom: 0;
+    }
     p {
       margin: {
         left: 10px;
@@ -70,9 +73,7 @@ body.home {
 }
 .featurette-content {
   @include make-md-column(7);
-  padding-top: 40px;
   @media screen and (min-width: $screen-md-min) {
-    padding-top: 120px;
     .image-right & {
       @include make-md-column-pull(5);
       padding-right: 40px;
@@ -82,14 +83,21 @@ body.home {
     }
   }
 }
+.featurette-header-image {
+  @include img-responsive();
+  margin: {
+    bottom: 10px;
+  }
+}
 .featurette-heading {
   font-size: 50px;
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+  margin-top: 10px;
 }
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
 }
 
 .carousel {

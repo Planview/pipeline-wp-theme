@@ -169,6 +169,17 @@ register_field_group(array (
                     'maxlength' => '',
                 ),
                 array (
+                    'key' => 'field_1397598368344',
+                    'label' => 'Header Image',
+                    'name' => 'featurette_header_image',
+                    'type' => 'image',
+                    'required' => 1,
+                    'column_width' => '',
+                    'save_format' => 'object',
+                    'preview_size' => 'medium',
+                    'library' => 'all',
+                ),
+                array (
                     'key' => 'field_5344478ca3156',
                     'label' => 'Content',
                     'name' => 'featurette_content',
