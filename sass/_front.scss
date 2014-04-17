@@ -86,7 +86,11 @@ body.home {
 .featurette-header-image {
   @include img-responsive();
   margin: {
-    bottom: 10px;
+    bottom: 0;
+    top: 30px;
+  }
+  @media screen and (min-width: $screen-md-min) {
+    margin-top: 0;
   }
 }
 .featurette-heading {

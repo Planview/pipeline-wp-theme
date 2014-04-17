@@ -29,10 +29,10 @@ li {
   display: block;
   height: 60px;
   padding: {
-    top: 5px;
-    bottom: 5px;
+    top: 2px;
+    bottom: 2px;
   }
-  width: 50px * (214px / 82px) + 30px;
+  width: 56px * (214px / 82px) + 30px;
   @include text-hide();
   background: {
     origin: content-box;
@@ -42,16 +42,27 @@ li {
   }
   @media screen and (min-width: $screen-sm-min) {
     display: none;
+    background: {
+      image: url('../img/pipeline-2014-homepage-nav-bar-tagline-2.png');
+    }
     .home & {
       display: block;
       height: 40px;
-      width: (214px / 82px) * 30px + 30px;
+      width: (403px / 56px) * 36px + 30px;
     }
   }
   @media screen and (min-width: $screen-md-min) {
-    .home &{
+    .home & {
       height: 60px;
-      width: (214px / 82px) * 50px + 30px;
+      width: (403px / 56px) * 56px + 30px;
+    }
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    background: {
+      image: url('../img/pipeline-2014-homepage-nav-bar-tagline.png');
+    }
+    .home & {
+      width: (625px / 56px) * 56px + 30px;
     }
   }
 }
