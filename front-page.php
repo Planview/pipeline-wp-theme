@@ -54,7 +54,7 @@ get_header( 'head' ); ?>
     if ( have_rows( 'front_carousel' ) ) :
         $pipeline_carousel_slides = get_field( 'front_carousel' );
     ?>
-    <div id="myCarousel" class="carousel slide">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="12000">
         <ol class="carousel-indicators">
             <?php for ( $i = 0, $ii = count($pipeline_carousel_slides); $i < $ii; $i += 1 ) : ?>
                 <li data-target="#myCarousel" data-slide-to="0" <?php echo (0 == $i ? 'class="active"' : ''); ?>></li>
