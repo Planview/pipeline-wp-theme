@@ -37,5 +37,10 @@ jQuery(document).ready(function($){
     });
 });
 
+//  Fancybox
+jQuery(document).ready(function($) {
+    $('.fancybox').fancybox();
+});
+
 // @codekit-append src/navigation.js
 // @codekit-append src/skip-link-focus-fix.js
