@@ -55,6 +55,7 @@ function pipeline_setup() {
 		'navbar-left' => __( 'Navbar Menu &ndash; Left Side', 'pipeline' ),
         'navbar-right' => __( 'Navbar Menu &ndash; Right Side', 'pipeline' ),
         'navbar-front' => __( 'Navbar Menu &ndash; Front Page Only (Right)', 'pipeline' ),
+        'footer-links' => __( 'Links in the Footer Above Copyright', 'pipeline' ),
 	) );
 
 	// Enable support for Post Formats.

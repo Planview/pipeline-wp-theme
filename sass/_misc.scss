@@ -128,3 +128,12 @@ li {
     }
   }
 }
+#footer-links {
+  @extend .list-inline;
+  text-align: center;
+  margin: {
+    top: 10px;
+    bottom: 0;
+  }
+  font-size: 110%;
+}

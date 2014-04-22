@@ -14,6 +14,14 @@
         <div class="sponsors">
             <?php the_field('pipeline_footer_content', 'option'); ?>
         </div>
+        <?php wp_nav_menu( array(
+            'theme_location'    =>  'footer-links',
+            'fallback_cb'       =>  false,
+            'container'         =>  'nav',
+            'menu_class'        =>  'list-inline',
+            'menu_id'           =>  'footer-links',
+            'depth'             =>  -1,
+        ) ); ?>
 		<div class="site-info">
 			<?php printf( __( 'Copyright &copy; %s PIPELINE Conference. All rights reserved.', 'pipeline' ), date('Y') ); ?>
 		</div><!-- .site-info -->
