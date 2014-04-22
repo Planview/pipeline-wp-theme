@@ -1,12 +1,12 @@
 {
   "name": "pipeline-wp-theme",
-  "version": "0.0.0",
+  "version": "0.1.6",
   "homepage": "https://github.com/Planview/pipeline-wp-theme",
   "authors": [
     "Stephen Crockett <scrockett@planview.com>"
   ],
   "main": "index.php",
-  "license": "GPL2+",
+  "license": "GPL-2.0+",
   "private": true,
   "ignore": [
     "**/.*",
