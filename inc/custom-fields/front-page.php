@@ -189,7 +189,7 @@ register_field_group(array (
                     'column_width' => '',
                     'default_value' => '',
                     'toolbar' => 'full',
-                    'media_upload' => 'no',
+                    'media_upload' => 'yes',
                 ),
                 array (
                     'key' => 'field_534447afa3157',
