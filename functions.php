@@ -149,3 +149,9 @@ require get_template_directory() . '/inc/custom-fields.php';
  * Load Custom Fields for Nav Menu
  */
 require get_template_directory() . '/inc/nav-custom-fields.php';
+
+/**
+ * Load TinyMCE settings
+ */
+require get_template_directory() . '/inc/tinymce.php';
+
