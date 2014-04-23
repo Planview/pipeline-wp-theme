@@ -89,6 +89,7 @@ function pipeline_scripts() {
     if ( !is_admin() ) {
         wp_enqueue_style( 'pipeline-style', get_stylesheet_directory_uri() . '/css/style.css' );
         wp_enqueue_style( 'pipeline-style-ie8', get_stylesheet_directory_uri() . '/css/ie8.css' );
+        wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/vendor/fancybox/source/jquery.fancybox.css' );
         $wp_styles->add_data( 'pipeline-style-ie8', 'conditional', 'lte IE 8' );
     }
 
@@ -96,7 +97,7 @@ function pipeline_scripts() {
     wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/min/bootstrap.min.js', array('jquery'), '3.1.1', true);
     wp_register_script('webshim', get_template_directory_uri() . '/vendor/webshim/js-webshim/minified/polyfiller.js', array('modernizr', 'jquery'), '1.12.4', true);
     wp_enqueue_script('pipeline', get_template_directory_uri() . '/js/min/pipeline.min.js', array('modernizr', 'jquery', 'webshim', 'fancybox' ), $pipeline_theme_info->get( 'Version' ), true );
-    wp_enqueue_script( 'fancybox', get_template_directory_uri() . 'vendor/fancybox/source/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true );
+    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/vendor/fancybox/source/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
