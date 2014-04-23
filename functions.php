@@ -155,3 +155,7 @@ require get_template_directory() . '/inc/nav-custom-fields.php';
  */
 require get_template_directory() . '/inc/tinymce.php';
 
+/**
+ * Admin settings and Login Form styles and settings
+ */
+require get_template_directory() . '/inc/admin-login.php';
