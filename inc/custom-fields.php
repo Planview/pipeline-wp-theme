@@ -23,6 +23,6 @@ if( function_exists('acf_add_options_sub_page') )
 
 if(function_exists("register_field_group"))
 {
-    include_once( get_template_directory() . '/inc/custom-fields/footer.php');
+    include_once( get_template_directory() . '/inc/custom-fields/options.php');
     include_once( get_template_directory() . '/inc/custom-fields/front-page.php');
 }

@@ -54,3 +54,14 @@ function pipeline_hide_dashboard() {
     }
 }
 add_action( 'admin_init', 'pipeline_hide_dashboard' );
+
+/**
+ * Add a custom message to the `wp-login.php` page
+ */
+function pipeline_login_message( $message ) {
+    if ( $pipeline_msg = get_field( 'pipeline_login_message', 'option' ) ) {
+        $message .= $pipeline_msg;
+    }
+    return $message;
+}
+add_filter( 'login_message', 'pipeline_login_message' );
