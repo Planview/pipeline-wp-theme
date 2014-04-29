@@ -60,7 +60,7 @@ add_action( 'admin_init', 'pipeline_hide_dashboard' );
  */
 function pipeline_login_message( $message ) {
     if ( $pipeline_msg = get_field( 'pipeline_login_message', 'option' ) ) {
-        $message .= $pipeline_msg;
+        $message .= force_balance_tags( $pipeline_msg );
     }
     return $message;
 }
