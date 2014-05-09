@@ -8,7 +8,13 @@ body {
     attachment: fixed;
   }
 }
-
+.site-header {
+  .no-nav & {
+    border: {
+      bottom: 2px solid $page-header-border-color;
+    }
+  }
+}
 .site-branding {
   @extend .col-md-9;
 }

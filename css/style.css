@@ -8308,6 +8308,10 @@ body {
   background-attachment: fixed;
 }
 
+.no-nav .site-header {
+  border-bottom: 2px solid #eeeeee;
+}
+
 .site-title {
   margin-top: 0;
   width: 100%;
