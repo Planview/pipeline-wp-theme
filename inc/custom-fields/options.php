@@ -28,7 +28,7 @@ register_field_group(array (
             array (
                 'param' => 'options_page',
                 'operator' => '==',
-                'value' => 'acf-options',
+                'value' => 'pipeline-theme-options',
                 'order_no' => 0,
                 'group_no' => 0,
             ),
