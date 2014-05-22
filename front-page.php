@@ -149,7 +149,7 @@ get_header( 'head' ); ?>
 
             <?php if ( get_field( 'float_tab_title' ) ) : ?>
                 <div class="fixed-link">
-                    <a href="<?php echo esc_url( get_field( 'float_tab_link_url' ) ); ?>" class="scroll-anchor"><?php the_field( 'float_tab_title' ); ?></a>
+                    <a href="<?php echo esc_url( get_field( 'float_tab_link_url' ) ); ?>"><?php the_field( 'float_tab_title' ); ?></a>
                 </div>
             <?php endif; ?>
 
