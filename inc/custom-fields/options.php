@@ -22,6 +22,18 @@ register_field_group(array (
             'rows' => '',
             'formatting' => 'html',
         ),
+        array (
+            'key' => 'field_537e2f60dee01',
+            'label' => 'Unsupported Browser Alert',
+            'name' => 'pipeline_unsupported_browser',
+            'type' => 'textarea',
+            'instructions' => 'This field can be plain text or <em>valid</em> HTML',
+            'default_value' => '',
+            'placeholder' => '',
+            'maxlength' => '',
+            'rows' => '',
+            'formatting' => 'html',
+        ),
     ),
     'location' => array (
         array (
