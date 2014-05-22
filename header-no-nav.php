@@ -8,7 +8,6 @@
  */
 ?>
 <?php get_header('head'); ?>
-<body <?php body_class('no-nav'); ?>>
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">

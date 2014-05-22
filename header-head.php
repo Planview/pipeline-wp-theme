@@ -16,3 +16,9 @@
 
     <?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
+<!--[if lt IE 8]>
+<div class="alert alert-danger">
+	<?php the_field('pipeline_unsupported_browser', 'option'); ?>
+</div>
+<![endif]-->

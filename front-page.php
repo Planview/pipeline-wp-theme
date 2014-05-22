@@ -9,7 +9,6 @@
  */
 
 get_header( 'head' ); ?>
-<body <?php body_class(); ?>>
     <?php
     /*
      * Navbar
