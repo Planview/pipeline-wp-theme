@@ -4,7 +4,7 @@
 
 // Call webshims and force it to use our current jQuery
 webshims.cfg.no$Switch = true;
-webshims.polyfill();
+webshims.polyfill("canvas details es5 filereader geolocation mediaelement picture promise track");
 
 // Hack for IE8 font-face in pseudo-elements aka icons
 (function ($) {
