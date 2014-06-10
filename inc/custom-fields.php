@@ -9,7 +9,8 @@
 if ( ! defined( 'ACF_LITE' ) ) define( 'ACF_LITE' , true );
 
 require_once( get_template_directory() . '/vendor/advanced-custom-fields/acf.php' );
-require_once( get_template_directory() . '/vendor/acf-options-page/acf-options-page.php' );
+if ( ! function_exists( 'acf_set_options_page_title' ) )
+	require_once( get_template_directory() . '/vendor/acf-options-page/acf-options-page.php' );
 require_once( get_template_directory() . '/vendor/acf-repeater/acf-repeater.php' );
 
 if( function_exists('acf_add_options_sub_page') )

@@ -1,20 +1,27 @@
 .navbar-icon {
   @extend .hidden-sm, .hidden-xs;
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50%;
   color: $navbar-default-bg;
   background-color: $navbar-default-color;
   margin-right: 5px;
   @include box-sizing(border-box);
-  @include size(40px,40px);
+  @include size(25px,25px);
   text-align: center;
+  font-size: 75%;
   a:hover & {
     background-color: $navbar-default-link-hover-color;
   }
-  .active &, .active a:hover & {
+  .active &, .active a:hover &,
+  .open &, .open a:hover & {
     color: $navbar-default-link-active-bg;
     background-color: $navbar-default-link-active-color;
+  }
+  .home & {
+    font-size: 100%;
+    padding: 10px;
+    @include size(40px, 40px);
   }
 }
 li {
@@ -103,15 +110,15 @@ li {
   bottom: 0;
   right: 0;
   padding: {
-    left: 40px;
-    right: 40px;
+    left: 80px;
+    right: 80px;
   }
   a {
     display: inline-block;
     background-color: $brand-success;
     padding: {
-      top: 10px;
-      bottom: 10px;
+      top: 6px;
+      bottom: 6px;
       left: 20px;
       right: 20px;
     }
@@ -136,4 +143,193 @@ li {
     bottom: 0;
   }
   font-size: 110%;
+}
+.bbp-form {
+  background: {
+    color: #fff;
+  }
+}
+.wp-editor-wrap {
+  border: 1px solid #ccc;
+}
+.alert-overlay {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  padding: 200px 20%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.search-results-inner {
+  @include make-lg-column(6);
+  @include make-md-column(8);
+  @include make-sm-column(10);
+  @include make-lg-column-offset(3);
+  @include make-md-column-offset(2);
+  @include make-sm-column-offset(1);
+}
+.search-type {
+  display: block;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+.search-result {
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
+  border-bottom: 1px solid $page-header-border-color;
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.survey-link-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: {
+    top: 240px;
+  }
+  z-index: 10;
+  @extend .hidden-xs;
+}
+.survey-link {
+  display: block;
+  @include button-variant($btn-primary-color, #0E86C7, darken(#0E86C7, 5%));
+  @include button-size($padding-large-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-large);
+  @include border-right-radius(0);
+  border-bottom: 0;
+  @include box-shadow(0 0 10px rgba(0,0,0,0.4));
+  span {
+    display: block;
+    background: {
+      image: url('../img/take-the-survey-vertical.png');
+      repeat: no-repeat;
+    }
+    height: 137px;
+    width: 23px;
+  }
+}
+
+$admin_bar_purple: #462686;
+
+body {
+  #wpadminbar,
+  #wpadminbar .quicklinks .menupop ul.ab-sub-secondary,
+  #wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+    color: #fff;
+    background-color:  $admin_bar_purple;
+  }
+  #wpadminbar .ab-top-menu>li.hover>.ab-item,
+  #wpadminbar .ab-top-menu>li:hover>.ab-item,
+  #wpadminbar .ab-top-menu>li>.ab-item:focus,
+  #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+  #wpadminbar .menupop .ab-sub-wrapper,
+  #wpadminbar .shortlink-input {
+    background-color: lighten($admin_bar_purple, 5%);
+  }
+  #wpadminbar #adminbarsearch:before,
+  #wpadminbar .ab-icon:before,
+  #wpadminbar .ab-item:before,
+  #wpadminbar a.ab-item,
+  #wpadminbar>#wp-toolbar span.ab-label,
+  #wpadminbar>#wp-toolbar span.noticon {
+    color: #fff;
+  }
+  #wpadminbar #wp-admin-bar-user-info .username,
+  #wpadminbar .quicklinks .menupop ul li a:focus,
+  #wpadminbar .quicklinks .menupop ul li a:focus strong,
+  #wpadminbar .quicklinks .menupop ul li a:hover,
+  #wpadminbar .quicklinks .menupop ul li a:hover strong,
+  #wpadminbar .quicklinks .menupop.hover ul li a:focus,
+  #wpadminbar .quicklinks .menupop.hover ul li a:hover,
+  #wpadminbar li .ab-item:focus:before,
+  #wpadminbar li a:focus .ab-icon:before,
+  #wpadminbar li.hover .ab-icon:before,
+  #wpadminbar li.hover .ab-item:before,
+  #wpadminbar li:hover #adminbarsearch:before,
+  #wpadminbar li:hover .ab-icon:before,
+  #wpadminbar li:hover .ab-item:before,
+  #wpadminbar.nojs .quicklinks .menupop:hover ul li a:focus,
+  #wpadminbar.nojs .quicklinks .menupop:hover ul li a:hover,
+  #wpadminbar .ab-top-menu>li.hover>.ab-item,
+  #wpadminbar .ab-top-menu>li:hover>.ab-item,
+  #wpadminbar .ab-top-menu>li>.ab-item:focus,
+  #wpadminbar.nojq .quicklinks .ab-top-menu>li>.ab-item:focus,
+  #wpadminbar>#wp-toolbar a:focus span.ab-label,
+  #wpadminbar>#wp-toolbar li.hover span.ab-label,
+  #wpadminbar>#wp-toolbar li:hover span.ab-label {
+    color: #ccc;
+  }
+  #wpadminbar .quicklinks li#wp-admin-bar-bp-notifications #ab-pending-notifications,
+  #wpadminbar .quicklinks li#wp-admin-bar-my-account a span.count,
+  #wpadminbar .quicklinks li#wp-admin-bar-my-account-with-avatar a span.count {
+    background: #fff;
+    color: $admin_bar_purple;
+    margin: 0;
+  }
+  #wpadminbar .quicklinks li#wp-admin-bar-bp-notifications #ab-pending-notifications.alert {
+    color: #fff;
+    background: #A91E8A;
+  }
+  #wpadminbar #wp-admin-bar-comments .count-0 {
+    opacity: .9;
+  }
+}
+body {
+  #bbpress-forums p.bbp-topic-meta img.avatar,
+  #bbpress-forums ul.bbp-reply-revision-log img.avatar,
+  #bbpress-forums ul.bbp-topic-revision-log img.avatar,
+  #bbpress-forums div.bbp-template-notice img.avatar,
+  #bbpress-forums .widget_display_topics img.avatar,
+  #bbpress-forums .widget_display_replies img.avatar {
+    margin-bottom: 0;
+  }
+}
+#bbpress-forums > #subscription-toggle a {
+  float: right;
+  @extend .btn, .btn-xs, .btn-default;
+}
+.profile-fields {
+  td.label {
+    display: table-cell;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-align: right;
+    white-space: nowrap;
+    border-radius: 0;
+  }
+}
+#buddypress div.dir-search {
+  margin: {
+    top: 0;
+    bottom: -39px;
+  }
+}
+#buddypress div.dir-search input[type=text],
+#buddypress li.groups-members-search input[type=text] {
+  font-size: inherit;
+  padding: {
+    top: 4px;
+    bottom: 4px;
+  }
+}
+
+.btn-orange {
+  @include button-variant( #ffffff, #f49006, darken(#f49006, 5%) );
+}
+body {
+  #buddypress button, #buddypress a.button, #buddypress input[type=submit], #buddypress input[type=button], #buddypress input[type=reset], #buddypress ul.button-nav li a, #buddypress div.generic-button a, #buddypress .comment-reply-link, a.bp-title-button {
+    font-size: inherit;
+  }
+}
+#buddypress div#item-header div.generic-button a.button  {
+  float: none;
+  margin: {
+    top: 0;
+    right: 0;
+  }
 }

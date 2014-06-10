@@ -8,6 +8,11 @@
  * Template Name: Front Page
  */
 
+if ( is_user_logged_in() && $pipeline_redirect_home = get_field( 'pipeline_logged_in_home', $post->ID ) ) {
+    wp_safe_redirect( $pipeline_redirect_home , 302 );
+}
+
+
 get_header( 'head' ); ?>
     <?php
     /*
@@ -83,6 +88,8 @@ get_header( 'head' ); ?>
 
     <div class="home-wrapper">
         <div class="container marketing">
+
+
             <?php
             /*
              * Front Page Columns

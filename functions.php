@@ -54,8 +54,12 @@ function pipeline_setup() {
 	register_nav_menus( array(
 		'navbar-left' => __( 'Navbar Menu &ndash; Left Side', 'pipeline' ),
         'navbar-right' => __( 'Navbar Menu &ndash; Right Side', 'pipeline' ),
+		'navbar-left-logged-in' => __( 'Navbar Menu &ndash; Left Side (Logged In)', 'pipeline' ),
+        'navbar-right-logged-in' => __( 'Navbar Menu &ndash; Right Side (Logged In)', 'pipeline' ),
         'navbar-front' => __( 'Navbar Menu &ndash; Front Page Only (Right)', 'pipeline' ),
         'footer-links' => __( 'Links in the Footer Above Copyright', 'pipeline' ),
+        'footer-links-logged-in' => __( 'Links in the Footer Above Copyright (Logged In)', 'pipeline' ),
+        'follow-links' => __( 'Social Media Links', 'pipeline' ),
 	) );
 
 	// Enable support for Post Formats.
@@ -87,12 +91,19 @@ function pipeline_scripts() {
 	if ( is_admin() ) wp_enqueue_style( 'pipeline-style', get_stylesheet_uri() );
 
     if ( !is_admin() ) {
-        wp_enqueue_style( 'pipeline-style', get_stylesheet_directory_uri() . '/css/style.css' );
-        wp_enqueue_style( 'pipeline-style-ie8', get_stylesheet_directory_uri() . '/css/ie8.css', array( 'pipeline-style-ie8-blessed1' ) );
-        wp_enqueue_style( 'pipeline-style-ie8-blessed1', get_stylesheet_directory_uri() . '/css/ie8-blessed1.css' );
+        wp_enqueue_style( 'pipeline-style', get_stylesheet_directory_uri() . '/css/style.css', array( 'pipeline-style-blessed1' ), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-blessed1', get_stylesheet_directory_uri() . '/css/style-blessed1.css', array( 'pipeline-style-blessed2' ), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-blessed2', get_stylesheet_directory_uri() . '/css/style-blessed2.css', array( 'pipeline-style-blessed3' ), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-blessed3', get_stylesheet_directory_uri() . '/css/style-blessed3.css', array(), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-ie8', get_stylesheet_directory_uri() . '/css/ie8.css', array( 'pipeline-style-ie8-blessed1' ), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-ie8-blessed1', get_stylesheet_directory_uri() . '/css/ie8-blessed1.css', array( 'pipeline-style-ie8-blessed2' ), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-ie8-blessed2', get_stylesheet_directory_uri() . '/css/ie8-blessed2.css', array( 'pipeline-style-ie8-blessed3' ), $pipeline_theme_info->get( 'Version' ) );
+        wp_enqueue_style( 'pipeline-style-ie8-blessed3', get_stylesheet_directory_uri() . '/css/ie8-blessed3.css', array(), $pipeline_theme_info->get( 'Version' ) );
         wp_enqueue_style( 'fancybox', get_stylesheet_directory_uri() . '/vendor/fancybox/source/jquery.fancybox.css' );
         $wp_styles->add_data( 'pipeline-style-ie8', 'conditional', 'lte IE 8' );
         $wp_styles->add_data( 'pipeline-style-ie8-blessed1', 'conditional', 'lte IE 8' );
+        $wp_styles->add_data( 'pipeline-style-ie8-blessed2', 'conditional', 'lte IE 8' );
+        $wp_styles->add_data( 'pipeline-style-ie8-blessed3', 'conditional', 'lte IE 8' );
     }
 
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/min/modernizr.min.js', array(), '2.7.2', false);
@@ -126,6 +137,7 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom nav walkers for this theme.
  */
 require get_template_directory() . '/inc/nav-walker-bootstrap.php';
+require get_template_directory() . '/inc/follow-nav-walker.php';
 
 /**
  * Custom functions that act independently of the theme templates.
@@ -161,3 +173,33 @@ require get_template_directory() . '/inc/tinymce.php';
  * Admin settings and Login Form styles and settings
  */
 require get_template_directory() . '/inc/admin-login.php';
+
+/**
+ * Helper functions for site-wide use
+ */
+require get_template_directory() . '/inc/helpers.php';
+
+/**
+ * Load the functionality for resources
+ */
+require get_template_directory() . '/inc/resources.php';
+
+/**
+ * Load the functionality for topic areas
+ */
+require get_template_directory() . '/inc/areas.php';
+
+/**
+ * Load the functionality for featured presentations
+ */
+require get_template_directory() . '/inc/presentations.php';
+
+/**
+ * Load the functionality for search
+ */
+require get_template_directory() . '/inc/search.php';
+
+/**
+ * Load the extra functionality for comments
+ */
+// require get_template_directory() . '/inc/comments.php';

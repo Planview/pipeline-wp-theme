@@ -70,6 +70,18 @@ register_field_group(array (
     'title' => 'Front Page Fields',
     'fields' => array (
         array (
+            'key' => 'field_537ea93051caf',
+            'label' => 'Redirect Logged in Users to New page',
+            'name' => 'pipeline_logged_in_home',
+            'type' => 'text',
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'formatting' => 'html',
+            'maxlength' => '',
+        ),
+        array (
             'key' => 'field_5344458aa314f',
             'label' => 'Carousel',
             'name' => 'front_carousel',

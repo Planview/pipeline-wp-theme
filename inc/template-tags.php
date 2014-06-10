@@ -20,18 +20,18 @@ function pipeline_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'pipeline' ); ?></h1>
-		<div class="nav-links">
-
-			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'pipeline' ) ); ?></div>
-			<?php endif; ?>
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'launch' ); ?></h1>
+		<ul class="nav-links">
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'pipeline' ) ); ?></div>
+			<li class="previous"><?php previous_posts_link( __( '<span class="meta-nav fa fa-chevron-left"></span> Previous Page', 'launch' ) ); ?></li>
 			<?php endif; ?>
 
-		</div><!-- .nav-links -->
+			<?php if ( get_next_posts_link() ) : ?>
+			<li class="next"><?php next_posts_link( __( 'Next Page <span class="meta-nav fa fa-chevron-right"></span>', 'launch' ) ); ?></li>
+			<?php endif; ?>
+
+		</ul><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }
@@ -146,7 +146,7 @@ add_action('wp_head', 'pipeline_polyfill',20);
  * Conditional Tag for gt IE8 on our style
  */
 function pipeline_ie_style_conditional($output, $handle) {
-    if ( $handle != 'pipeline-style' ) return $output;
+    if ( $handle !== 'pipeline-style' && $handle !== 'pipeline-style-blessed1' && $handle !== 'pipeline-style-blessed2' && $handle !== 'pipeline-style-blessed3' ) return $output;
 
     return "<!--[if gt IE 8]><!-->\n" . $output . "<!--<![endif]-->\n";
 }

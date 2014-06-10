@@ -51,7 +51,12 @@ body {
     weight: 400;
     size: 20px;
   }
+  margin-bottom: 0;
   @include box-shadow(0 0 20px rgba(0,0,0,0.1));
+}
+.navbar-nav > li > a {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .site-footer {
@@ -83,4 +88,91 @@ body:not(.home) .entry-header {
 }
 .entry-title, .page-title {
   color: $gray;
+}
+
+.follow-menu-wrapper {
+  position: fixed;
+  top: 200px;
+  right: -240px;
+  @include box-shadow(0 0 10px rgba(0,0,0,0.4));
+  display: table-row;
+  @include border-left-radius(4px);
+  @include transition(all 1s);
+  &:hover {
+    right: 0;
+  }
+  z-index: 5;
+}
+.follow-menu-heading {
+  display: table-cell;
+  width: 40px;
+  height: 120px;
+  background: {
+    color: #479a0f;
+    image: url('../img/follow-vertical.png');
+    position: center center;
+    repeat: no-repeat
+  }
+  @include border-left-radius(4px);
+}
+.follow-menu-container {
+  display: table-cell;
+  width: 240px;
+  background-color: white;
+  vertical-align: middle;
+  padding: 10px;
+  ul {
+    margin-bottom: 0;
+  }
+}
+.follow-home-wrapper {
+  position: absolute;
+  display: table-row;
+  top: 0;
+  right: -500px;
+  border-bottom-left-radius: 4px;
+  background-color: #fff;
+  border: {
+    bottom: 1px solid #ddd;
+    left: 1px solid #ddd;
+  }
+  ul.lead {
+    margin-bottom: 0;
+  }
+  @include transition(all 1s);
+  &:hover {
+    right: 0;
+  }
+  z-index: 1;
+}
+.follow-home-heading {
+  display: table-cell;
+  vertical-align: center;
+  padding: {
+    left: 15px;
+    right: 15px;
+    top: 6px;
+    bottom: 6px;
+  }
+  background-color: $gray-lighter;
+  border-bottom-left-radius: 4px;
+}
+.follow-home-title {
+  margin: 0;
+//  color: white;
+  font-size: 20px;
+}
+.follow-home-container {
+  display: table-cell;
+  vertical-align: center;
+  width: 500px;
+  padding: {
+    left: 15px;
+    right: 15px;
+    top: 6px;
+    bottom: 6px;
+  }
+}
+.nav-links {
+  @extend .pager;
 }

@@ -65,3 +65,33 @@ function pipeline_login_message( $message ) {
     return $message;
 }
 add_filter( 'login_message', 'pipeline_login_message' );
+
+
+/**
+ * Remove other menus from admin bar for subscribers
+ */
+function pipeline_custom_admin_bar() {
+    remove_action( 'admin_bar_menu', 'wp_admin_bar_wp_menu' );
+    if ( current_user_can( 'edit_posts' ) )
+        return;
+
+    remove_action( 'admin_bar_menu', 'wp_admin_bar_sidebar_toggle' );
+    remove_action( 'admin_bar_menu', 'wp_admin_bar_my_sites_menu' );
+    remove_action( 'admin_bar_menu', 'wp_admin_bar_site_menu', 30 );
+    remove_action( 'admin_bar_menu', 'wp_admin_bar_updates_menu' );
+    // remove_action( 'admin_bar_menu', 'wp_admin_bar_search_menu' );
+}
+add_action( 'add_admin_bar_menus', 'pipeline_custom_admin_bar' );
+
+/**
+ * Replace the "Howdy" verbage in the admin bar
+ */
+function pipeline_replace_howdy( $wp_admin_bar ) {
+    $my_account=$wp_admin_bar->get_node('my-account');
+    $newtitle = str_replace( 'Howdy,', 'Welcome,', $my_account->title );
+    $wp_admin_bar->add_node( array(
+        'id' => 'my-account',
+        'title' => $newtitle,
+    ) );
+}
+add_filter( 'admin_bar_menu', 'pipeline_replace_howdy',25 );

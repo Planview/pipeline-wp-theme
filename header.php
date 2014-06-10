@@ -36,7 +36,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <?php wp_nav_menu(
                         array(
-                            'theme_location'    =>  'navbar-left',
+                            'theme_location'    =>  'navbar-left' . ( is_user_logged_in() ? '-logged-in' : '' ),
                             'fallback_cb'       =>  false,
                             'menu_class'        =>  'nav navbar-nav',
                             'depth'             =>  2,
@@ -46,7 +46,7 @@
                     ); ?>
                     <?php wp_nav_menu(
                         array(
-                            'theme_location'    =>  'navbar-right',
+                            'theme_location'    =>  'navbar-right' . ( is_user_logged_in() ? '-logged-in' : '' ),
                             'fallback_cb'       =>  false,
                             'menu_class'        =>  'nav navbar-nav navbar-right',
                             'depth'             =>  2,
