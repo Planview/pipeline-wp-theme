@@ -162,6 +162,8 @@
 					<?php endif; ?>
 				</div>
 			</div>
+		<?php else: ?>
+			<?php get_template_part( 'content', 'login' ); ?>
 		<?php endif; //User logged in ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

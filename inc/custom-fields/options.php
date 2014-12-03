@@ -34,6 +34,20 @@ register_field_group(array (
             'rows' => '',
             'formatting' => 'html',
         ),
+        array (
+            'key' => 'field_539a2b51c7c54',
+            'label' => 'Registration Page',
+            'name' => 'pipeline_registration_page',
+            'type' => 'post_object',
+            'post_type' => array (
+                0 => 'page',
+            ),
+            'taxonomy' => array (
+                0 => 'all',
+            ),
+            'allow_null' => 1,
+            'multiple' => 0,
+        ),
     ),
     'location' => array (
         array (

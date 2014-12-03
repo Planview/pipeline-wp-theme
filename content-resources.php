@@ -28,6 +28,8 @@ if ( is_post_type_archive( 'resources' ) ) :
 			<div class="resources-content">
 				<?php the_content(); ?>
 			</div>
+		<?php else: ?>
+			<?php get_template_part( 'content', 'login' ); ?>
 		<?php endif; //User logged in ?>
 
 	</div><!-- .entry-content -->

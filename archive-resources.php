@@ -45,6 +45,8 @@ get_header(); ?>
 						<?php endif; wp_reset_postdata(); ?>					
 					</div>
 				</div>
+			<?php else: ?>
+				<?php get_template_part( 'content', 'login' ); ?>
 			<?php endif; ?>
 		</article><!-- #post-## -->
     </main><!-- #main -->

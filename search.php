@@ -29,6 +29,8 @@ get_header(); ?>
 
 			<?php pipeline_paging_nav(); ?>
 			
+			<?php else: ?>
+				<?php get_template_part( 'content', 'login' ); ?>
 			<?php endif; ?>
 
 		<?php else : ?>
